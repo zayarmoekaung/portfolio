@@ -6,12 +6,16 @@ import styles from './page.module.css'
 import Link from 'next/link'
 import SA from 'scroll-animations-js';
 import  'scroll-animations-js/dist/css/index.min.css';
-
+import Navbar from '../components/navbar'
 
 export default function Home() {
   useEffect(() => SA.init(), []);
   return (
+    <>
+      <Navbar></Navbar>
+      
     <main className={styles.main}>
+    
      <div className={styles.hero}>
      <p className={`${styles.frame} sa-animation sa-fade-right`} >
       
@@ -30,11 +34,12 @@ export default function Home() {
         <h1>Full Stack Developer</h1>
         <h1>DevOp</h1>
         <h1>Software Engineer</h1>
-        <h1>FreeLance</h1>
+        <h1>FreeLancer</h1>
      </div>
       
     
      </div>
     </main>
+    </>
   )
 }
