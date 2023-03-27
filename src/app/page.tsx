@@ -4,8 +4,8 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import Link from 'next/link'
-import SA from 'scroll-animations-js';
-import  'scroll-animations-js/dist/css/index.min.css';
+import SA from 'scroll-animations-js'
+import  'scroll-animations-js/dist/css/index.min.css'
 import Navbar from '../components/navbar'
 
 export default function Home() {
