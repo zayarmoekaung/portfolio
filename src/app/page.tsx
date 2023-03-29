@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useRef } from 'react';
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
@@ -7,9 +7,10 @@ import Link from 'next/link'
 import SA from 'scroll-animations-js'
 import  'scroll-animations-js/dist/css/index.min.css'
 import Navbar from '../components/navbar'
-
+import Language from '@/components/languages';
 export default function Home() {
   useEffect(() => SA.init(), []);
+ 
   return (
     <>
       <Navbar></Navbar>
@@ -39,6 +40,10 @@ export default function Home() {
       
     
      </div>
+    <section id='skills'>
+     <Language />
+     </section>
+    
     </main>
     </>
   )

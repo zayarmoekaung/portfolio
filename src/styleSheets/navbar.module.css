@@ -37,6 +37,7 @@
 }
 .nav_links li {
     position: relative;
+    cursor: pointer;
 }
 .nav_links li a::before {
     content: "";
