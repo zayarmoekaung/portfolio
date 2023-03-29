@@ -21,5 +21,8 @@
     "react-scroll": "^1.8.9",
     "scroll-animations-js": "^1.0.11",
     "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "@types/react-scroll": "^1.8.6"
   }
 }

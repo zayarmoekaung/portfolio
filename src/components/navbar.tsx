@@ -3,7 +3,7 @@ import React, { useState, useEffect , forwardRef } from 'react';
 import Image from 'next/image'
 import styles from '../styleSheets/navbar.module.css'
 import { Link, animateScroll as scroll } from 'react-scroll';
-const Navbar = forwardRef((props, ref) => {
+export default function Navbar () {
 const [open , setOpen] = useState(false);   
 
 const handelHumber = () =>{
@@ -42,5 +42,4 @@ setOpen(current => !current);
         </ul>
     </nav>
     )
-})
-export default Navbar;
+}
