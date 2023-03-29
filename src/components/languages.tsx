@@ -40,7 +40,7 @@ const lans = [
     
 ];
 const [expand , setExpand] = useState(false)
-const [logos, setLogos]  = useState([]);
+const [logos, setLogos]  = useState([] as React.ReactElement[])
 useEffect(() => {
 
   const slans = expand ? lans : lans.slice(0, 4);
