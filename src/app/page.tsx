@@ -7,6 +7,7 @@ import Link from 'next/link'
 import SA from 'scroll-animations-js'
 import  'scroll-animations-js/dist/css/index.min.css'
 import Navbar from '../components/navbar'
+import Skills from '@/components/skills';
 
 export default function Home() {
   useEffect(() => SA.init(), []);
@@ -39,6 +40,7 @@ export default function Home() {
       
     
      </div>
+     <Skills/>
     </main>
     </>
   )
