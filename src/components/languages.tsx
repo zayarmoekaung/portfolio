@@ -39,18 +39,28 @@ const lans = [
     {src: "/svg/wordpress/wordpress-plain.svg" ,  name: "Wordpress"},
     
 ];
-const logos = lans.map((lan, index)=>
-     
-<div key={index} className={`${styles.logobox} ${styles.border}  ${styles.neon} sa-animation sa-fade-down` } sa-delay="300">
-<Image 
-src={lan.src}
-width={100}
-height={100}
-alt={`logo_${lan.name}`}
-/>
-<span>{lan.name}</span>
-</div>)
+const [expand , setExpand] = useState(false)
+const [logos, setLogos] = useState([]);
+useEffect(() => {
 
+  const slans = expand ? lans : lans.slice(0, 4);
+  const logo = slans.map((lan, index) => (
+    <div key={index} className={`${styles.logobox} ${styles.border} ${styles.neon} sa-animation sa-fade-down`} sa-delay="300">
+      <Image 
+        src={lan.src}
+        width={100}
+        height={100}
+        alt={`logo_${lan.name}`}
+      />
+      <span>{lan.name}</span>
+    </div>
+  ));
+  setLogos(logo);
+});
+
+const handleExpand= () =>{
+    setExpand(true)
+}
 
     return(
         <>
@@ -59,7 +69,7 @@ alt={`logo_${lan.name}`}
         <div className={styles.flexbox}>
         {logos}
         
-          
+         <button onClick={handleExpand}>expand</button> 
         </div>
         </>
     )
