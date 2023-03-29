@@ -41,7 +41,7 @@ const lans = [
 ];
 const logos = lans.map((lan, index)=>
      
-<div key={index} className={`${styles.logobox} ${styles.border}  ${styles.neon} sa-animation sa-fade-up-left` } sa-delay="100">
+<div key={index} className={`${styles.logobox} ${styles.border}  ${styles.neon} sa-animation sa-fade-down` } sa-delay="100">
 <Image 
 src={lan.src}
 width={100}
