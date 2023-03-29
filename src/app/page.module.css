@@ -2,10 +2,12 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 10px;
   align-items: center;
   padding: 1rem;
   min-height: 100vh;
+  overflow: hidden;
 }
 .hero{
   display: flex;

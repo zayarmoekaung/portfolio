@@ -1,10 +1,11 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , forwardRef } from 'react';
 import Image from 'next/image'
 import styles from '../styleSheets/navbar.module.css'
-
-export default function Navbar() {
+import { Link, animateScroll as scroll } from 'react-scroll';
+export default function Navbar () {
 const [open , setOpen] = useState(false);   
+
 const handelHumber = () =>{
 setOpen(current => !current);
 };    
@@ -32,8 +33,8 @@ setOpen(current => !current);
             
         </div>
         <ul className={`${styles.nav_links} ${open? styles.open : ''}`}>
-            <li className={open? styles.fade : ''}><a href="#">Home</a></li>
-            <li className={open? styles.fade : ''}><a href="#">Skills</a></li>
+            <li className={open? styles.fade : ''} onClick={() => scroll.scrollToTop()}><a >Top</a></li>
+            <li className={open? styles.fade : ''}><Link to="skills" smooth={true} duration={500}>Skills</Link></li>
             <li className={open? styles.fade : ''}><a href="#">Prjects</a></li>
             <li className={open? styles.fade : ''}><a href="#">Services</a></li>
             <li className={open? styles.fade : ''}><a href="#">Contact Me</a></li>
