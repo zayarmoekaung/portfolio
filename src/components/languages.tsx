@@ -5,7 +5,6 @@ import styles from '../styleSheets/languages.module.css'
 import localFont from 'next/font/local'
 import SA from 'scroll-animations-js'
 import  'scroll-animations-js/dist/css/index.min.css'
-import { Element } from 'react-scroll';
 const anurati = localFont({ src: '../fonts/Ailerons-TrialVersion.otf' })
 const aileron= localFont({ src: '../fonts/Anurati-Regular.otf' })
 
@@ -41,7 +40,7 @@ const lans = [
     
 ];
 const [expand , setExpand] = useState(false)
-const [logos, setLogos]  = useState<React.ElementType[]>([]);
+const [logos, setLogos]  = useState([]);
 useEffect(() => {
 
   const slans = expand ? lans : lans.slice(0, 4);
@@ -57,7 +56,7 @@ useEffect(() => {
     </div>
   ));
   setLogos(logo);
-});
+}, [expand, lans]);
 
 const handleExpand= () =>{
     setExpand(true)
