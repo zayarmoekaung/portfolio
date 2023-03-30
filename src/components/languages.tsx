@@ -41,6 +41,7 @@ const lans = [
 ];
 const [expand , setExpand] = useState(false)
 const [logos, setLogos]  = useState([] as React.ReactElement[])
+const logoContainerClasses = expand ? styles.show : styles.hide;
 useEffect(() => {
 
   const slans = expand ? lans : lans.slice(0, 4);
@@ -59,17 +60,18 @@ useEffect(() => {
 }, [expand, lans]);
 
 const handleExpand= () =>{
-    setExpand(true)
+    setExpand(!expand)
 }
 
     return(
         <>
         <p className={anurati.className}>S K I L L S</p>
         <span className={`${styles.disp} ${aileron.className} `}>Alaways learning and improving to be able to use latest  technologies</span>
-        <div className={styles.flexbox}>
+        <div className={`${styles.flexbox} ${logoContainerClasses}`}>
         {logos}
-        
+        <div className={`${styles.button_box}`}>
          <button onClick={handleExpand}>expand</button> 
+         </div>
         </div>
         </>
     )

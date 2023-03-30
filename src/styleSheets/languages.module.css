@@ -68,12 +68,43 @@
 
 
 .flexbox{
+    position: relative;
     width: 100%;
-    height: max-content;
     display: flex;
     flex-direction: row;
     gap: 1px;
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
+
+   
 }
+.show {
+  
+  max-height: 1200px;
+  transition: max-height 0.5s ease-in-out;
+}
+.hide{
+  min-height: 200px;
+  max-height: 600px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+.flexbox .button_box{
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.flexbox .button_box button{
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: relative;
+}
+
+/* Fade out */
