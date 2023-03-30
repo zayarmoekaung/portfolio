@@ -31,15 +31,11 @@
     height: 100%;
     display: flex;
     z-index: 99;
-    padding: 10%;
+    padding: 5%;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
-   
-   
-  
-
+    align-content: center; 
 }
 .panel{
     max-width: 700px;
@@ -52,6 +48,7 @@
     justify-content: center;
     align-content: center;
     z-index: 91;
+    padding: 2%;
 
 }
 .calendar_box{

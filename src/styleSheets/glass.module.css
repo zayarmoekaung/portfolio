@@ -17,6 +17,7 @@
     letter-spacing: 2px;
     cursor: pointer;
     text-transform: uppercase;
+    cursor: pointer;
   }
  
   .glass_button:hover {
