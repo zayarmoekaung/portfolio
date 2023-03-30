@@ -79,13 +79,15 @@
 
    
 }
+
 .show {
   
-  max-height: 1200px;
+  max-height: 3000px;
   transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
 }
 .hide{
-  min-height: 200px;
+ 
   max-height: 600px;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
@@ -97,14 +99,16 @@
   bottom: 5px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
 }
 .flexbox .button_box button{
-  width: 20px;
+  width: 100px;
   height: 20px;
+  font-size: .5rem;
   display: block;
   position: relative;
+  border-radius: 10px;
 }
 
-/* Fade out */

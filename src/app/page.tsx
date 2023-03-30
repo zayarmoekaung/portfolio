@@ -18,7 +18,7 @@ export default function Home() {
       
     <main className={styles.main}>
     
-     <div className={styles.hero}>
+     <div className={styles.hero} id='hero'>
      <p className={`${styles.frame} sa-animation sa-fade-right`} >
       
      <Image 

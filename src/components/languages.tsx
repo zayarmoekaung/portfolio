@@ -2,9 +2,11 @@
 import React, { useState, useEffect , useRef } from 'react';
 import Image from 'next/image'
 import styles from '../styleSheets/languages.module.css'
+import glass from '../styleSheets/glass.module.css'
 import localFont from 'next/font/local'
 import SA from 'scroll-animations-js'
 import  'scroll-animations-js/dist/css/index.min.css'
+import { Link, animateScroll as scroll , scroller} from 'react-scroll';
 const anurati = localFont({ src: '../fonts/Ailerons-TrialVersion.otf' })
 const aileron= localFont({ src: '../fonts/Anurati-Regular.otf' })
 
@@ -61,16 +63,26 @@ useEffect(() => {
 
 const handleExpand= () =>{
     setExpand(!expand)
+    scroller.scrollTo('expandbtn', {
+        duration: 1500,
+        delay: 100,
+        smooth: true,
+       
+        offset: 100 // Scrolls to element + 50 pixels down the page
+     
+      });
 }
 
     return(
         <>
-        <p className={anurati.className}>S K I L L S</p>
+        <p className={anurati.className}>S K I L L S</p> 
         <span className={`${styles.disp} ${aileron.className} `}>Alaways learning and improving to be able to use latest  technologies</span>
-        <div className={`${styles.flexbox} ${logoContainerClasses}`}>
+        <br />
+       
+        <div className={`${styles.flexbox} ${logoContainerClasses} ${glass.glass_panel}`}>
         {logos}
         <div className={`${styles.button_box}`}>
-         <button onClick={handleExpand}>expand</button> 
+         <button id='expandbtn' name='expandbtn' onClick={handleExpand} className={`${glass.glass_button}`}>{expand? 'show less' : 'show all'}</button> 
          </div>
         </div>
         </>

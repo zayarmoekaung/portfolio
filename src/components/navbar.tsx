@@ -2,14 +2,25 @@
 import React, { useState, useEffect , forwardRef } from 'react';
 import Image from 'next/image'
 import styles from '../styleSheets/navbar.module.css'
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link, animateScroll as scroll , scroller} from 'react-scroll';
 export default function Navbar () {
 const [open , setOpen] = useState(false);   
 
 const handelHumber = () =>{
 setOpen(current => !current);
 };    
+   const handleScroll = (name : string) =>{
+    setOpen(current => !current);
+    scroller.scrollTo(name, {
+        duration: 1500,
+        delay: 100,
+        smooth: true,
+       
+        offset: 100 // Scrolls to element + 50 pixels down the page
      
+      });
+     
+   }  
            
     return (
         <nav className={styles.nav}>
@@ -33,8 +44,8 @@ setOpen(current => !current);
             
         </div>
         <ul className={`${styles.nav_links} ${open? styles.open : ''}`}>
-            <li className={open? styles.fade : ''} onClick={() => scroll.scrollToTop()}><a >Top</a></li>
-            <li className={open? styles.fade : ''}><Link to="skills" smooth={true} duration={500}>Skills</Link></li>
+            <li className={open? styles.fade : ''}  onClick={() => handleScroll('hero')}><a >Top</a></li>
+            <li className={open? styles.fade : ''}><a  onClick={() => handleScroll('skills')}>Skills</a></li>
             <li className={open? styles.fade : ''}><a href="#">Prjects</a></li>
             <li className={open? styles.fade : ''}><a href="#">Services</a></li>
             <li className={open? styles.fade : ''}><a href="#">Contact Me</a></li>
