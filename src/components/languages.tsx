@@ -59,7 +59,7 @@ useEffect(() => {
     </div>
   ));
   setLogos(logo);
-}, [expand, lans]);
+}, [expand, lans , logos]);
 
 const handleExpand= () =>{
     setExpand(!expand)
@@ -68,7 +68,7 @@ const handleExpand= () =>{
         delay: 100,
         smooth: true,
        
-        offset: 100 // Scrolls to element + 50 pixels down the page
+        offset: 0 // Scrolls to element + 50 pixels down the page
      
       });
 }

@@ -8,6 +8,7 @@ import SA from 'scroll-animations-js'
 import  'scroll-animations-js/dist/css/index.min.css'
 import Navbar from '../components/navbar'
 import Language from '@/components/languages';
+import Moto from '@/components/moto';
 
 export default function Home() {
   useEffect(() => SA.init(), []);
@@ -41,10 +42,12 @@ export default function Home() {
       
     
      </div>
-    <section id='skills'>
+    <section id='skills' className={`${styles.section}`}>
      <Language />
      </section>
-    
+     <section id='moto'  className={`${styles.section}`}>
+      < Moto />
+     </section>
 
     </main>
     </>

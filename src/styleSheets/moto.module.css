@@ -1,0 +1,22 @@
+.slidebox{
+    display: block;
+    position: relative;
+    width: 100vw;
+    height: auto;
+   padding-left: 20%;
+   padding-right: 20%;
+
+}
+.slide{
+    display: 'flex';
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+.slide_img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
