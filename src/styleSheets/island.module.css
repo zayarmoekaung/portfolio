@@ -1,0 +1,92 @@
+.island{
+    width: 100px;
+    height: 30px;
+    position: fixed;
+    left: 5%;
+    bottom: 10px;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+.backdrop{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    background-color: black;
+    backdrop-filter: blur(10px);
+    opacity: .5;
+  
+
+}
+.shell{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 99;
+    padding: 10%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    pointer-events: none;
+   
+  
+
+}
+.panel{
+    max-width: 700px;
+    width: 100%;
+    height: max-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+}
+.calendar_box{
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.panel img{
+    align-self: center;
+    min-width: 200px;
+    width: 50%;
+    height: auto;
+}
+.btn_outter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-end; 
+}
+.calendar{
+    min-width: 250px;
+    width: 50%;
+    height: auto;
+    background: rgba(0,0,0,0.5);
+   
+}
+.calendar div{
+    background: rgba(0,0,0,0.5);
+}
+
+.calendar div{
+    background-color: none;
+}
