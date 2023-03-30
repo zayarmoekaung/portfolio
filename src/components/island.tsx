@@ -32,9 +32,10 @@ return (
     <button className={`${glass.glass_button} ${styles.island}`} hidden = {open} onClick={handleIsland}>{date}  <  AiOutlineAppstore /></button>
     {
         open &&
-      <>
-        <div className={`${styles.backdrop}`} onClick={handleIsland}></div>
+     
+        
         <div className={`${styles.shell}`} >
+        <div className={`${styles.backdrop}`} onClick={handleIsland}></div>
             <div className={`${styles.btn_outter}`}><button onClick={handleIsland} className={`${glass.glass_button}`}>X</button></div>
             <div className={`${styles.panel} ${glass.glass_panel}`}>
             <div className={`${styles.calendar_box}`}> 
@@ -48,7 +49,7 @@ return (
                </div>
             </div>
         </div>
-      </>
+    
     }
     </>
 )
