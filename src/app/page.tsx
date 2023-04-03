@@ -10,6 +10,7 @@ import Navbar from '../components/navbar'
 import Language from '@/components/languages';
 import Moto from '@/components/moto';
 import Island from '@/components/island';
+import Music from '@/components/anthem/music';
 export default function Home() {
   useEffect(() => SA.init(), []);
  
@@ -50,6 +51,7 @@ export default function Home() {
      </section>
      
      <Island/>
+     <Music/>
     </main>
     </>
   )

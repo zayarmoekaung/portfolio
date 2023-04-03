@@ -1,0 +1,116 @@
+.box{
+    position: fixed;
+    bottom: 10px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);  
+}
+.box .expand{
+    text-align: center;
+    vertical-align: middle;
+    justify-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+}
+.box div{
+   
+    background-color: rgba(0, 0, 0, 0) !important ;
+}
+.box_min {
+    z-index: 90;
+}
+.box_max {
+    background-color: rgba(0, 0, 0) !important ;
+  
+    z-index: 99;
+}
+.inner_box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+}
+.misc_box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items:center;
+    padding: 10px;
+    width: 100%;
+}
+.min{
+    position: relative;
+    width: 100px;
+    height: min-content;
+    --rm-audio-player-interface-container : rgba(0, 0, 0, 0)  !important ;
+}
+.active button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    -webkit-box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+            box-shadow: 0 0 17px 3px #ffff01,0 0 4px 2px #ffff01;
+    z-index: -1;
+    -webkit-animation-name: yellow-shadow;
+            animation-name: yellow-shadow;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  
+  .active button::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 50%;
+    -webkit-box-shadow: 0 0 17px 3px #0ff,0 0 4px 2px #0ff;
+            box-shadow: 0 0 17px 3px #0ff,0 0 4px 2px #0ff;
+    z-index: -1;
+    -webkit-animation-name: cyan-shadow;
+            animation-name: cyan-shadow;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  
+.min .impklu .interface-grid{
+    background-color: rgba(0, 0, 0, 0)  !important ;
+}
+.max{
+    position: relative;
+    width: 100%;
+    height: max-content;
+}
+.max div{
+    width: auto !important;
+}
