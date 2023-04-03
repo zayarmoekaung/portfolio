@@ -18,15 +18,7 @@ export default function Music() {
   const [activeUI, setActiveUI] = useState<ActiveUI>({ playButton: true })
  
   const [width,setWidth] = useState("40px")
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const handlePlay = () => {
-    setIsPlaying(true);
-  };
-
-  const handlePause = () => {
-    setIsPlaying(false);
-  };
+ 
   const handelExpand = () =>{
     
     if (!expand) {

@@ -12,7 +12,12 @@ const aileron= localFont({ src: '../fonts/Anurati-Regular.otf' })
 
 export default function Language() {
 useEffect(() => SA.init(), []);
-const lans = [
+
+const [expand , setExpand] = useState(false)
+const [logos, setLogos]  = useState([] as React.ReactElement[])
+const logoContainerClasses = expand ? styles.show : styles.hide;
+useEffect(() => {
+  const lans = [
     {src:"/svg/amazonwebservices/amazonwebservices-original-wordmark.svg", name:"AWS" },
     {src:"/svg/apache/apache-original-wordmark.svg",name:"Apache Server"},
     {src:"/svg/bitbucket/bitbucket-original-wordmark.svg",name:"BitBucket"},
@@ -41,11 +46,6 @@ const lans = [
     {src: "/svg/wordpress/wordpress-plain.svg" ,  name: "Wordpress"},
     
 ];
-const [expand , setExpand] = useState(false)
-const [logos, setLogos]  = useState([] as React.ReactElement[])
-const logoContainerClasses = expand ? styles.show : styles.hide;
-useEffect(() => {
-
   const slans = expand ? lans : lans.slice(0, 4);
   const logo = slans.map((lan, index) => (
     <div key={index} className={`${styles.logobox} ${styles.border} ${styles.neon} `} >
@@ -59,7 +59,7 @@ useEffect(() => {
     </div>
   ));
   setLogos(logo);
-}, [expand, lans , logos]);
+}, [expand,  logos]);
 
 const handleExpand= () =>{
     setExpand(!expand)
