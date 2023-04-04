@@ -7,27 +7,26 @@ import {playList} from './playlist';
 import localFont from 'next/font/local';
 import { BiChevronLeftCircle } from "react-icons/bi"; 
 import { AiFillCloseCircle } from "react-icons/ai";
-import AudioPlayer , {
-  ActiveUI
+import {FcMusic} from "react-icons/fc";
 
-} from 'react-modern-audio-player';
+
 
 const aileron= localFont({ src: '../../fonts/Anurati-Regular.otf' })
 export default function Music() {
  
   type ActiveUI = {
-    all: boolean;
-    playButton: boolean;
+    all: boolean | undefined;
+    playButton: boolean | undefined;
    
-    trackTime: boolean;
+    trackTime: boolean | undefined;
    
-    progress: ProgressUI;
+    progress: ProgressUI | undefined;
   };
   type ProgressUI = "waveform" | "bar" | false;
 type PlayListUI = "sortable" | "unSortable" | false;
   const [expand , setExpand] = useState(false) 
   
-  const [activeUI, setActiveUI] = useState<ActiveUI>({ all: false,
+  const [activeUI, setActiveUI] = useState<ActiveUI>({ all: false ,
     trackTime: false,
     progress: false,
      playButton: true })
@@ -56,6 +55,13 @@ type PlayListUI = "sortable" | "unSortable" | false;
 }
 
 useEffect(() => {
+
+  const play_btn = <span className={`${styles.play_btn} `}><FcMusic/></span>
+  const pause_btn =   <span className={`${styles.play_btn} ${ styles.active}`}><FcMusic/></span>
+  const CustomIcons = {
+    play: play_btn,
+    pause: pause_btn,
+  }
   import('react-modern-audio-player')
     .then(({ default: AudioPlayer }) => {
       setAudioPlayer(
@@ -64,6 +70,7 @@ useEffect(() => {
         activeUI={{
           ...activeUI
         }}
+        customIcons = {CustomIcons}
         rootContainerProps={{
           width
         }}
@@ -73,7 +80,7 @@ useEffect(() => {
     .catch((error) => {
       console.error(error);
     });
-}, []);
+}, [activeUI]);
 const [audioPlayer, setAudioPlayer] = useState<React.ReactNode>(null);
     return (
         <>
