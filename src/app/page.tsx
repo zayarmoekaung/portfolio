@@ -10,6 +10,8 @@ import Navbar from '../components/navbar'
 import Language from '@/components/languages';
 import Moto from '@/components/moto';
 import Island from '@/components/island';
+import Music from '@/components/anthem/music';
+import Project from '@/components/projects/project_show';
 export default function Home() {
   useEffect(() => SA.init(), []);
  
@@ -50,6 +52,10 @@ export default function Home() {
      </section>
      
      <Island/>
+     <Music/>
+     <section id='projects' className={`${styles.section}`}>
+     <Project/>
+     </section>
     </main>
     </>
   )

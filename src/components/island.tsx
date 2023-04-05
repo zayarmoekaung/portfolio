@@ -29,7 +29,7 @@ const current = new Date();
   const day = current.getDay()
 return (
     <>
-    <button className={`${glass.glass_button} ${styles.island}`} hidden = {open} onClick={handleIsland}>{date}  <  AiOutlineAppstore /></button>
+    <button className={`${glass.glass_button} ${styles.island}`} hidden = {open} onClick={handleIsland}>{date} </button>
     {
         open &&
      
