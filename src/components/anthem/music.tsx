@@ -80,7 +80,7 @@ useEffect(() => {
     .catch((error) => {
       console.error(error);
     });
-}, [activeUI]);
+}, [activeUI,width]);
 const [audioPlayer, setAudioPlayer] = useState<React.ReactNode>(null);
     return (
         <>

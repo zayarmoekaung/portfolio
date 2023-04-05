@@ -9,7 +9,7 @@ export default function Project() {
     return(
         <>
             <h3 className={`${aileron.className}`}>Projects</h3>
-            <p className={`${aileron.className}`}>Selected recent projects I've done for amazing individuals and companies</p>
+            <p className={`${aileron.className}`}>Selected recent projects I&apos;ve done for amazing individuals and companies</p>
         </>
     )
 }
