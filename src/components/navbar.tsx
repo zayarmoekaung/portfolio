@@ -46,7 +46,7 @@ setOpen(current => !current);
         <ul className={`${styles.nav_links} ${open? styles.open : ''}`}>
             <li className={open? styles.fade : ''}  onClick={() => handleScroll('hero')}><a >Top</a></li>
             <li className={open? styles.fade : ''}><a  onClick={() => handleScroll('skills')}>Skills</a></li>
-            <li className={open? styles.fade : ''}><a href="#">Projects</a></li>
+            <li className={open? styles.fade : ''}><a onClick={() => handleScroll('projects')}>Projects</a></li>
             <li className={open? styles.fade : ''}><a href="#">Services</a></li>
             <li className={open? styles.fade : ''}><a href="#">Contact Me</a></li>
             

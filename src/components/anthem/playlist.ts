@@ -46,6 +46,14 @@ export const playList = [
           "/anthem/thumbs/Kid_Cudi_-_Stars_in_the_Sky.jpg",
         src: "/anthem/stars_in_the_sky.mp3",
         id: 6
+      },
+      {
+        name: "Just Wanna Rock",
+        writer: "Lil Uzi Vert",
+        img:
+          "/anthem/thumbs/just_wanna_rock.jpg",
+        src: "/anthem/just_wanna_rock.mp3",
+        id: 7
       }
   ];
   
