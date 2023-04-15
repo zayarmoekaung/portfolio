@@ -12,6 +12,8 @@ import Moto from '@/components/moto';
 import Island from '@/components/island';
 import Music from '@/components/anthem/music';
 import Project from '@/components/projects/project_show';
+import Service from '@/components/services/service';
+import Contact from '@/components/contact';
 export default function Home() {
   useEffect(() => SA.init(), []);
  
@@ -56,6 +58,8 @@ export default function Home() {
      <section id='projects' className={`${styles.section}`}>
      <Project/>
      </section>
+     <Service/>
+     <Contact/>
     </main>
     </>
   )

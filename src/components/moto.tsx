@@ -31,8 +31,8 @@ return (
               <div  className={`${styles.slide}`}>
               <Image 
      src={slideImage.url}
-     width={300}
-     height={300}
+     width={800}
+     height={800}
      alt='moto'
      className={styles.slide_img}
      />
