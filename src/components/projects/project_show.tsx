@@ -8,8 +8,8 @@ import { List } from "./list";
 const aileron= localFont({ src: '../../fonts/Anurati-Regular.otf' })
 export default function Project() {
     const Projects = List.map((pj,index)=>(
-		<a href={pj.link} target='blank'>
-			<div key={index} className={`${styles.project} ${glass.glass_panel}`}>
+		<a href={pj.link} target='blank' key={index}>
+			<div  className={`${styles.project} ${glass.glass_panel}`}>
 		  <Image 
         src={pj.image}
         width={400}
