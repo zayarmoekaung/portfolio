@@ -10,6 +10,9 @@ export default function Project() {
         <>
             <h3 className={`${aileron.className}`}>Projects</h3>
             <p className={`${aileron.className}`}>Selected recent projects I&apos;ve done for amazing individuals and companies</p>
+            <div className={`${styles.container}`}>
+
+            </div>
         </>
     )
 }
