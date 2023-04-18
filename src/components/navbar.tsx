@@ -16,7 +16,7 @@ setOpen(current => !current);
         delay: 100,
         smooth: true,
        
-        offset: 100 // Scrolls to element + 50 pixels down the page
+        offset: 0 // Scrolls to element + 50 pixels down the page
      
       });
      
@@ -47,8 +47,8 @@ setOpen(current => !current);
             <li className={open? styles.fade : ''}  onClick={() => handleScroll('hero')}><a >Top</a></li>
             <li className={open? styles.fade : ''}><a  onClick={() => handleScroll('skills')}>Skills</a></li>
             <li className={open? styles.fade : ''}><a onClick={() => handleScroll('projects')}>Projects</a></li>
-            <li className={open? styles.fade : ''}><a href="#">Services</a></li>
-            <li className={open? styles.fade : ''}><a href="#">Contact Me</a></li>
+            <li className={open? styles.fade : ''}><a onClick={() => handleScroll('services')}>Services</a></li>
+            <li className={open? styles.fade : ''}><a onClick={() => handleScroll('contact')}>Contact Me</a></li>
             
         </ul>
     </nav>
