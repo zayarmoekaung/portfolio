@@ -10,7 +10,7 @@ const handelHumber = () =>{
 setOpen(current => !current);
 };    
    const handleScroll = (name : string) =>{
-    setOpen(current => !current);
+    setOpen(false);
     scroller.scrollTo(name, {
         duration: 1500,
         delay: 100,

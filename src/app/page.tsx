@@ -3,6 +3,7 @@ import React, { useState, useEffect ,useRef } from 'react';
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.module.css'
+import glass from '../styleSheets/glass.module.css'
 import Link from 'next/link'
 import SA from 'scroll-animations-js'
 import  'scroll-animations-js/dist/css/index.min.css'
@@ -14,9 +15,21 @@ import Music from '@/components/anthem/music';
 import Project from '@/components/projects/project_show';
 import Service from '@/components/services/service';
 import Contact from '@/components/contact';
+import { saveAs } from "file-saver";
 export default function Home() {
   useEffect(() => SA.init(), []);
- 
+  const saveCv = () => {
+    saveAs(
+      "/info/zayar_resume.pdf",
+      "zayarmoekaung_resume.pdf"
+    );
+  };
+  const savePortfolio = () => {
+    saveAs(
+      "/info/zayarmoekaung_portfolio.pptx",
+      "zayarmoekaung_portfolio.pptx"
+    );
+  };
   return (
     <>
       <Navbar></Navbar>
@@ -42,6 +55,10 @@ export default function Home() {
         <h1>DevOp</h1>
         <h1>Software Engineer</h1>
         <h1>FreeLancer</h1>
+        <div className={styles.btns}>
+         <button className={glass.glass_button} onClick={saveCv}>Get my resume</button>
+         <button className={glass.glass_button} onClick={savePortfolio}>Get my portfolio</button>
+        </div>
      </div>
       
     

@@ -342,3 +342,24 @@
 .section p{
   font-size: small;
 }
+.btns{
+  width: max-content;
+  padding: 3px;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+  align-content: flex-start;
+  gap: 5px;
+  flex-wrap: wrap;
+
+}
+.btns button{
+  font-size: 10px;
+  height: 20px;
+  width: max-content;
+  padding: 4px;
+  z-index: 99;
+
+}
