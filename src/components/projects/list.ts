@@ -10,7 +10,12 @@ export const List = [
         disp : "DevOp in MLAC project. A comic reader web application which the artists from myanmar can share their creations.",
         image : "/projects/mlac.png",
         link  : "http://www.myanmarlocalartists.com"
-    },
+    }
+
+]
+/* 
+[
+    ,
     {
         name : "Fujimidai",
         disp : "created frontend UI and reservation system for Fujimidai animal Hospital. A project for my employeer company Chums Solutions / Noshikumi",
@@ -29,5 +34,5 @@ export const List = [
         image : "/projects/zeroney.png",
         link  : "https://datascience.zeroney.ai"
     }
-
 ]
+*/
