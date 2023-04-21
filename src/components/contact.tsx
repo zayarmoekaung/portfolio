@@ -15,8 +15,8 @@ return(
         <div className={styles.contact_wrapper}>
           <div className={styles.contact_info}>
             <div className={styles.contact_icon}><FaMapMarkerAlt /></div>
-            <p>40B, 1st floor </p>
-            <p>Thamadi 4th st , Thingangyon , Yangon</p>
+            <p>40B, 1st floor,Thamadi 4th st </p>
+            <p>Thingangyon , Yangon , Myanmar</p>
           </div>
           <div className={styles.contact_info}>
             <div className={styles.contact_icon}><FaPhoneAlt /></div>
