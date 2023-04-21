@@ -57,7 +57,7 @@ export default function Home() {
         <h1>FreeLancer</h1>
         <div className={styles.btns}>
          <button className={glass.glass_button} onClick={saveCv}>Get my resume</button>
-         <button className={glass.glass_button} onClick={savePortfolio}>Get my portfolio</button>
+         <button className={glass.glass_button} >Get my portfolio</button>
         </div>
      </div>
       
