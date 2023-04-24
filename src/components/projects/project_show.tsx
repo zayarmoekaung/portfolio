@@ -8,7 +8,7 @@ import { List } from "./list";
 const aileron= localFont({ src: '../../fonts/Anurati-Regular.otf' })
 export default function Project() {
     const Projects = List.map((pj,index)=>(
-		<a href={pj.link} target='blank' key={index}>
+		<a  key={index}>
 			<div  className={`${styles.project} ${glass.glass_panel}`}>
 		  <Image 
         src={pj.image}
@@ -24,7 +24,7 @@ export default function Project() {
     return(
         <>
             <h3 className={`${aileron.className}`}>Projects</h3>
-            <p className={`${aileron.className}`}>Selected recent projects I&apos;ve done for amazing individuals and companies</p>
+            <p className={`${aileron.className}`}>Selected recent projects I&apos;ve done </p>
             <div className={`${styles.container}`}>
 			{Projects}
             </div>       
