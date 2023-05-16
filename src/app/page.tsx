@@ -20,7 +20,7 @@ export default function Home() {
   useEffect(() => SA.init(), []);
   const saveCv = () => {
     saveAs(
-      "/info/zayar_resume.pdf",
+      "/info/ZayarMoeKaung_Resume_16-05-2023-10-29-33.pdf",
       "zayarmoekaung_resume.pdf"
     );
   };
@@ -57,7 +57,7 @@ export default function Home() {
         <h1>FreeLancer</h1>
         <div className={styles.btns}>
          <button className={glass.glass_button} onClick={saveCv}>Get my resume</button>
-         <button className={glass.glass_button} >Get my portfolio</button>
+         <button className={glass.glass_button} onClick={savePortfolio}>Get my portfolio</button>
         </div>
      </div>
       
