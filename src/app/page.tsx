@@ -16,7 +16,13 @@ import Project from '@/components/projects/project_show';
 import Service from '@/components/services/service';
 import Contact from '@/components/contact';
 import { saveAs } from "file-saver";
+import CodersRankSummary from '@/components/coderrank/coderrank_summary';
+import CoderRankActivity from '@/components/coderrank/activity';
+import CoderRankExperience from '@/components/coderrank/experience';
+import localFont from 'next/font/local'
+const aileron= localFont({ src: '../fonts/Anurati-Regular.otf' })
 export default function Home() {
+  
   useEffect(() => SA.init(), []);
   const saveCv = () => {
     saveAs(
@@ -30,6 +36,7 @@ export default function Home() {
       "zayarmoekaung_portfolio.pptx"
     );
   };
+
   return (
     <>
       <Navbar></Navbar>
@@ -63,8 +70,10 @@ export default function Home() {
       
     
      </div>
-    <section id='skills' className={`${styles.section}`}>
+     
+    <section id='skills' className={`${styles.section}`}> 
      <Language />
+     <CodersRankSummary username="zayarmoekaung" />
      </section>
      <section id='moto'  className={`${styles.section}`}>
       < Moto />
@@ -74,8 +83,13 @@ export default function Home() {
      <Music/>
      <section id='projects' className={`${styles.section}`}>
      <Project/>
+     <CoderRankActivity username="zayarmoekaung" />
      </section>
      <Service/>
+     <section id='experience' className={`${styles.exp_section}`}>
+      <h3 className={`${aileron.className}`}>Work Experiences</h3>
+     <CoderRankExperience username="zayarmoekaung"/>
+     </section>
      <Contact/>
     </main>
     </>

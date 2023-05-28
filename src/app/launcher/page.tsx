@@ -4,26 +4,39 @@ import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import Link from 'next/link'
 import { useState , useEffect } from 'react'
-import { API, TagTypes, } from 'nhentai-api';
+import axios from 'axios';
+import Iframe from 'react-iframe'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Post() {
-const api = new API(); 
-const [cover , setCover] = useState('')
-api.getBook(177013).then(book => {
-	setCover(api.getImageURL(book.cover))    // https://t.nhentai.net/galleries/987560/cover.jpg
-	api.getImageURL(book.pages[1]) // https://i.nhentai.net/galleries/987560/2.jpg
-});
+const [nuclearCode, setNuclearCode] = useState('')
+const [ready,setReady] = useState(false)
+  useEffect(() => {
+   const openNewTab = () => {
+     const newTab = window.open('https://zayar.otamyanmar.com', '_blank');
+
+     const handleNewTabLoad = () => {
+       // Get the contents of the new tab
+       const contents = newTab.document.documentElement.innerHTML;
+       console.log(contents);
+
+       // Close the new tab
+       newTab.close();
+
+       // Remove the event listener
+       newTab.removeEventListener('load', handleNewTabLoad);
+     };
+
+     // Add a load event listener to the new tab
+     newTab.addEventListener('load', handleNewTabLoad);
+   };
+
+   openNewTab();
+ }, []);
   return (
      <h1>
-        Hello next page
-        <Image 
-        src={cover}
-        width={300}
-        height={800}
-        alt={`logo_${cover}`}
-        />
-        <Link href={'/'}>Home</Link>
+    
+       
      </h1>
      
   )

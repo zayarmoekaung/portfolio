@@ -339,6 +339,19 @@
   text-align: center;
   margin-bottom: 20px;
 }
+.exp_section{
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 5%;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  margin-bottom: 20px;
+}
+.exp_section h3{
+  text-align: center;
+}
 .section p{
   font-size: small;
 }
