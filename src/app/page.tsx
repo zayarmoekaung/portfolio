@@ -88,10 +88,7 @@ const { executeRecaptcha } = useGoogleReCaptcha();
         console.log("Execute recaptcha not yet available");
         return;
       }
-      executeRecaptcha("enquiryFormSubmit").then((gReCaptchaToken) => {
-        console.log(gReCaptchaToken, "response Google reCaptcha server");
-        handleSubmit(e);
-      });
+      handleSubmit(e);
     },
     [executeRecaptcha]
   );
@@ -196,7 +193,7 @@ try {
     </form>
             </div>
         </div>
-    </GoogleReCaptchaProvider>
+        </GoogleReCaptchaProvider>
     }
      <div className={styles.hero} id='hero'>
      <p className={`${styles.frame} sa-animation sa-fade-right`} >
