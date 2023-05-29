@@ -70,10 +70,10 @@ const { executeRecaptcha } = useGoogleReCaptcha();
     setEmailError(validateEmail(value));
      
   };
-  const validateEmail = (email) => {
+  const validateEmail = (vemail) => {
     // Email validation logic
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
+    if (!emailPattern.test(vemail)) {
       return 'Invalid email address';
     }
     return '';
@@ -84,6 +84,7 @@ const { executeRecaptcha } = useGoogleReCaptcha();
   const handleSumitForm = useCallback(
     (e: { preventDefault: () => void; }) => {
       e.preventDefault();
+      
       if (!executeRecaptcha) {
         console.log("Execute recaptcha not yet available");
         return;
@@ -104,9 +105,9 @@ const { executeRecaptcha } = useGoogleReCaptcha();
     const absoluteUrl = getAbsoluteUrl();
     handlemodal();
     const formData = new FormData();
-formData.append('name', name);
-formData.append('email', email);
-formData.append('type', type);
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('type', type);
 
 try {
   const response = await fetch(absoluteUrl + '/api/email', {
@@ -187,7 +188,7 @@ try {
         onChange={handleNameChange}
         className={styles.inputField}
       />
-      <button onClick={handleSumitForm} className={styles.button}>
+      <button onClick={handleSubmit} className={styles.button}>
         Send
       </button>
     </form>

@@ -94,7 +94,7 @@ export async function POST(request: Request) {
         <h1 class="greeting">Greetings!</h1>
         <p class="message">Dear ${toName},</p>
         <p class="message">I am thrilled to have the chance to share my skills and experience with you. </p>
-        <p class="message">I have 3+ of experience in Web Development, and I have successfully completed various projects for clients. My expertise  which I believe would be valuable in contributing to your team's success.</p>
+        <p class="message">I have 3+ years of experience in Web Development, and I have successfully completed various projects for clients. My expertise  which I believe would be valuable in contributing to your team's success.</p>
         <p class="message"> I am confident that my skills and dedication would make a positive impact.</p>
         <p class="message">I would be delighted to discuss further how my skills align with your needs. Please feel free to reach out to me with any questions or to schedule a meeting or interview.</p>
         <p class="message">I look forward to the opportunity to discuss my qualifications in detail. Attached is my ${toType == 'CV' ? 'resume' : 'portfolio'} for your convenience. Should you need any additional information, please do not hesitate to ask.</p>
