@@ -142,12 +142,14 @@ try {
       <Navbar></Navbar>
      {
       message &&
-      <div className={`${styles.notification} ${noti== 'success' ? styles.success : styles.error}`}>
+      <div className={styles.noti_box}>
+        <div className={`${styles.notification} ${noti== 'success' ? styles.success : styles.error}`}>
       <span className={`${styles.message}`}>{message}</span>
       <button className={`${styles.close_button}`}onClick={handleClose}>
         &times;
       </button>
     </div>
+      </div>
 
 
      }  
