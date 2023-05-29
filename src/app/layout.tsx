@@ -1,5 +1,7 @@
+
 import './globals.css'
 import "animate.css/animate.min.css"
+
 
 export const metadata = {
   title: 'Zayar-Portfolio',
@@ -43,7 +45,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      
       <body>{children}</body>
+      
     </html>
   )
 }

@@ -1,0 +1,40 @@
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .notification.success {
+    background-color: #32cd32;
+  }
+  
+  .notification.error {
+    background-color: #ff0000;
+  }
+  
+  .message {
+    margin: 0;
+  }
+  
+  
+  .close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+  }
+  
