@@ -12,6 +12,9 @@ export async function POST(request: Request) {
   const toEmail = formData.email;
   const toName = formData.name;
   const toType = formData.type;
+  const company = formData.company;
+  const phone   = formData.phone;
+  const reason  = formData.reason;
   const fileDirectory = path.join(process.cwd(), 'info');
   const client = new SMTPClient({
     user: 'zayarmoekaung0@gmail.com',
@@ -19,7 +22,98 @@ export async function POST(request: Request) {
     host: 'smtp.gmail.com',
     ssl: true,
   });
+  try {
+    const emailData = {
+      from: 'zayarmoekaung0@gmail.com',
+      to: 'zayarmoekaung0@gmail.com',
+      subject: toName + ' Requested My ' + toType,
+      text:toName + 'Requested My ' + toType,
+      attachment: [
+        { data: `
+        <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Email Template</title>
+    <style>
+      /* Define CSS styles for the email */
+      body {
+        font-family: Arial, sans-serif;
+      }
+  
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+  
+      .content {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #ffffff;
+      }
+  
+      .logo {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+      }
+  
+      .logo img {
+        max-width: 200px;
+        height: auto;
+      }
+  
+      .greeting {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+  
+      .message {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+  
+      .signature {
+        font-weight: bold;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="logo">
+          <img src="https://zayar.otamyanmar.com/icon.png" alt="Logo">
+        </div>
+        <h1 class="greeting">${toType} got requested</h1>
+        <p class="signature">${toName}</p>
+        <p class="signature">${company}</p>
+        <p class="signature">${toEmail}</p>
+        <p class="signature">${phone}</p>
+        <p class="message">${reason}</p>
 
+      </div>
+    </div>
+  </body>
+  </html>
+  
+        `, alternative: true },
+       
+      ],
+     
+    
+    };
+   
+    await client.sendAsync(emailData);
+    
+  } catch (error) {
+    console.error('Error sending email:', error);
+    return new Response('Failed to send email', { status: 500 });
+  }
   try {
     var filePath = path.join(fileDirectory, toType == 'Resume' ? 'ZayarMoeKaung_Resume_16-05-2023-10-29-33.pdf' : 'zayar_portfolio_05_29_23.pdf');
     var fileName = toType == 'Resume' ? 'ZayarMoeKaung_Resume.pdf' : 'ZayarMoeKaung_Portfolio.pdf'

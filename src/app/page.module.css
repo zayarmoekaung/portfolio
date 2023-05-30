@@ -412,7 +412,9 @@
   .inputField {
     width: 100%;
   }
-
+  .textarea {
+    width: 100%;
+  }
   .button {
     width: 100%;
   }
@@ -465,4 +467,38 @@ z-index: 99;
   color: #fff;
   cursor: pointer;
   padding: 0;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.textarea {
+  min-height: 150px;
+  resize: vertical;
+  width: 300px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.textArea.autoHeight {
+  height: auto;
+}
+.remainingChars {
+  font-size: 14px;
+  margin-top: 0.5rem;
+  color: #888;
+}
+
+.maxCharsReached {
+  color: #f00;
 }
