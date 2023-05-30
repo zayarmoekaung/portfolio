@@ -299,7 +299,7 @@ export default function Home() {
                     {remainingChars} / 200
                   </p>
                   {reasonError && <p className={styles.error_txt}>{reasonError}</p>}
-                  <button onClick={handleSubmit} className={styles.button}>
+                  <button onClick={handleSubmit} className={glass.glass_button}>
                     Send
                   </button>
                 </form>
