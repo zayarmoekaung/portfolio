@@ -249,6 +249,7 @@ export default function Home() {
                     value={name}
                     onChange={handleNameChange}
                     className={styles.inputField}
+                    maxLength={30}
                   />
                   {nameError && <p className={styles.error_txt}>{nameError}</p>}
                   <input
@@ -258,6 +259,7 @@ export default function Home() {
                     value={companyName}
                     onChange={handleCompanyNameChange}
                     className={styles.inputField}
+                    maxLength={30}
                   />
                   {cNameError && <p className={styles.error_txt}>{cNameError}</p>}
                   <input
@@ -267,6 +269,7 @@ export default function Home() {
                     value={email}
                     onChange={handleEmailChange}
                     className={styles.inputField}
+                    maxLength={30}
                   />
                   {emailError && <p className={styles.error_txt}>{emailError}</p>}
                   <input
@@ -277,6 +280,7 @@ export default function Home() {
                     placeholder="Enter your phone number"
                     required
                     className={styles.inputField}
+                    maxLength={13}
                   />
                   {phoneError && <p className={styles.error_txt}>{phoneError}</p>}
                   <textarea
