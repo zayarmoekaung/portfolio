@@ -102,7 +102,7 @@
 @media screen and (max-width: 800px){
     .nav{
         position: fixed;
-        z-index: 3;
+        z-index: 21;
     }
     .hamburger{
         display:block;
