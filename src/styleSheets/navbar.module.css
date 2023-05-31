@@ -130,7 +130,7 @@
         -webkit-clip-path: circle(1000px at 90% -10%);
         pointer-events: all;
         background: #131418;
-        z-index: 9;
+        z-index: 21;
     }
     .nav_links li{
         opacity: 0;
