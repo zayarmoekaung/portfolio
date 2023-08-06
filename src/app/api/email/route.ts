@@ -115,7 +115,7 @@ export async function POST(request: Request) {
     return new Response('Failed to send email', { status: 500 });
   }
   try {
-    var filePath = path.join(fileDirectory, toType == 'Resume' ? 'ZayarMoeKaung_Resume_16-05-2023-10-29-33.pdf' : 'zayar_portfolio_05_29_23.pdf');
+    var filePath = path.join(fileDirectory, toType == 'Resume' ? 'ZayarMoeKaung_Resume_16-05-2023-10-29-33.pdf' : 'zayar_portfolio.pdf');
     var fileName = toType == 'Resume' ? 'ZayarMoeKaung_Resume.pdf' : 'ZayarMoeKaung_Portfolio.pdf'
     const fileStream = createReadStream(filePath);
     

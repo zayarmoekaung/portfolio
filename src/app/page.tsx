@@ -346,7 +346,7 @@ export default function Home() {
         <Island />
         <Music />
         <section id='projects' className={`${styles.section}`}>
-          <Project />
+          
           <CoderRankActivity username="zayarmoekaung" />
         </section>
         <Service />
