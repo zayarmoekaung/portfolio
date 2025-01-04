@@ -15,12 +15,12 @@ return(
         <div className={styles.contact_wrapper}>
           <div className={styles.contact_info}>
             <div className={styles.contact_icon}><FaMapMarkerAlt /></div>
-            <p>40B, 1st floor,Thamadi 4th st </p>
-            <p>Thingangyon , Yangon , Myanmar</p>
+            <p>Ramkhamhaeng Soi 50</p>
+            <p>BangKapi , BangKok , Thailand</p>
           </div>
           <div className={styles.contact_info}>
             <div className={styles.contact_icon}><FaPhoneAlt /></div>
-            <p>+95 997-542-777-3</p>
+            <p>+66 944-128-234 , +95 997-542-777-3</p>
           </div>
           <div className={styles.contact_info}>
             <div className={styles.contact_icon}><FaEnvelope /></div>
@@ -31,6 +31,5 @@ return(
     </section>
     </>
 );
-
 
 }

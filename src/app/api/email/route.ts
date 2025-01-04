@@ -6,15 +6,15 @@ export async function POST(request: Request) {
   if (request.method !== 'POST') {
     return new Response('Method Not Allowed', { status: 405 });
   }
- 
+
   const email = await request.formData();
   const formData = Object.fromEntries([...email.entries()]);
   const toEmail = formData.email;
   const toName = formData.name;
   const toType = formData.type;
   const company = formData.company;
-  const phone   = formData.phone;
-  const reason  = formData.reason;
+  const phone = formData.phone;
+  const reason = formData.reason;
   const fileDirectory = path.join(process.cwd(), 'info');
   const client = new SMTPClient({
     user: 'zayarmoekaung0@gmail.com',
@@ -27,9 +27,10 @@ export async function POST(request: Request) {
       from: 'zayarmoekaung0@gmail.com',
       to: 'zayarmoekaung0@gmail.com',
       subject: toName + ' Requested My ' + toType,
-      text:toName + 'Requested My ' + toType,
+      text: toName + 'Requested My ' + toType,
       attachment: [
-        { data: `
+        {
+          data: `
         <!DOCTYPE html>
   <html>
   <head>
@@ -101,31 +102,32 @@ export async function POST(request: Request) {
   </body>
   </html>
   
-        `, alternative: true },
-       
+        `, alternative: true
+        },
+
       ],
-     
-    
+
     };
-   
+
     await client.sendAsync(emailData);
-    
+
   } catch (error) {
     console.error('Error sending email:', error);
     return new Response('Failed to send email', { status: 500 });
   }
   try {
-    var filePath = path.join(fileDirectory, toType == 'Resume' ? 'Zayar_moe_kaung_resume.pdf' : 'zayar_portfolio.pdf');
+    var filePath = path.join(fileDirectory, toType == 'Resume' ? 'ZayarMoeKaung_Resume_021024.pdf' : 'zayarmoekaung_portfolio.pdf');
     var fileName = toType == 'Resume' ? 'ZayarMoeKaung_Resume.pdf' : 'ZayarMoeKaung_Portfolio.pdf'
     const fileStream = createReadStream(filePath);
-    
+
     const emailData = {
       from: 'zayarmoekaung0@gmail.com',
       to: toEmail as string,
       subject: 'Sending Requested ' + toType,
-      text:'Sending Requested ' + toType,
+      text: 'Sending Requested ' + toType,
       attachment: [
-        { data: `
+        {
+          data: `
         <!DOCTYPE html>
   <html>
   <head>
@@ -193,22 +195,23 @@ export async function POST(request: Request) {
         <p class="message">I would be delighted to discuss further how my skills align with your needs. Please feel free to reach out to me with any questions or to schedule a meeting or interview.</p>
         <p class="message">I look forward to the opportunity to discuss my qualifications in detail. Attached is my ${toType == 'CV' ? 'resume' : 'portfolio'} for your convenience. Should you need any additional information, please do not hesitate to ask.</p>
         <p class="signature">ZayarMoeKaung</p>
-        <p class="signature">+959975427773</p>
+        <p class="signature">+66944128234</p>
       </div>
     </div>
   </body>
   </html>
   
-        `, alternative: true },
+        `, alternative: true
+        },
         {
           name: fileName as string,
           stream: fileStream,
         },
       ],
-     
+
       attachmentName: fileName as string,
     };
-   
+
     await client.sendAsync(emailData);
 
     return new Response('Email sent successfully', { status: 200 });
@@ -217,4 +220,3 @@ export async function POST(request: Request) {
     return new Response('Failed to send email', { status: 500 });
   }
 }
-

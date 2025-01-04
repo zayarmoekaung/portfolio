@@ -8,8 +8,6 @@ import localFont from 'next/font/local'
 const aileron= localFont({ src: '../fonts/Anurati-Regular.otf' })
 export default function Moto() {
  
-      
-
       const slideImages = [
         {
             url : '/motos/stj_1.webp'
