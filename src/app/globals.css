@@ -100,11 +100,10 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+
 codersrank-summary {
   --header-bg-color: rgba(0,0,0);;
   --name-font-size: 20px;
