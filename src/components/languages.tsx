@@ -26,6 +26,7 @@ const lans = [
   {src: "/svg/laravel/laravel-plain.svg", name: "Laravel"},
   {src: "/svg/mongodb/mongodb-plain.svg", name: "MongoDB"},
   {src: "/svg/mysql/mysql-plain.svg", name: "MySql"},
+  {src: "/svg/Nuxt_logo.svg", name: "Nuxt.js"},
   {src: "/svg/nextjs-original.svg", name: "Next.js"},
   {src: "/svg/nginx/nginx-original.svg", name: "Nginx"},
   {src: "/svg/nodejs/nodejs-plain.svg", name: "Node.js"},
@@ -108,7 +109,8 @@ const handleExpand= () =>{
 
     return(
         <>
-        <p className={anurati.className}>S K I L L S</p> 
+        <span className={`${anurati.className} ${styles.title}`}>S K I L L S</span>
+        <br/> 
         <span className={`${styles.disp} ${aileron.className} `}>Alaways learning and improving to be able to use latest  technologies</span>
         <br />
        
