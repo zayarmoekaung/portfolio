@@ -1,14 +1,20 @@
 function goto(elementId) {
-     const element = document.getElementById(elementId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+        });
+    } else {
+        console.log(`Element with ID '${elementId}' not found.`);
+    }
 }
-function resetActive(){
-const activeElements = document.getElementsByClassName('active');
-for (let i = 0; i < activeElements.length; i++) {
-    activeElements[i].classList.remove('active');
-  }
+function resetActive() {
+    const activeElements = document.getElementsByClassName('active');
+    for (let i = 0; i < activeElements.length; i++) {
+        activeElements[i].classList.remove('active');
+    }
 }
 function home() {
     window.location.href = "/demo/vone/index.html";

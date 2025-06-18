@@ -19,10 +19,10 @@
         </a>
         <script src="/demo/vone/scripts/navbar.js"></script>
         <div class="middle">
-            <a  class="active" id="home_btn" onclick="home()"><img src="/demo/vone/assets/home.png" /></a>
-            <a  id="about_btn" onclick="about()"><span>About</span></a>
-            <a  id="projects_btn" onclick="projects()"><span>Projects</span></a>
-            <a  id="contact_btn" onclick="contact()"><span>Contact me</span></a>
+            <a class="active" id="home_btn" onclick="home()"><img src="/demo/vone/assets/home.png" /></a>
+            <a id="about_btn" onclick="about()"><span>About</span></a>
+            <a id="projects_btn" onclick="projects()"><span>Projects</span></a>
+            <a id="contact_btn" onclick="contact()"><span>Contact me</span></a>
         </div>
         <div class="login-signup">
             <button class="btn">Hire me</button>
@@ -217,5 +217,54 @@
         </div>
     </nav>
 </body>
+<script>
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                console.log(`Element ${entry.target.id} is in view!`);
+                switch (id) {
+                    case 'about':
+                        const about_btn = document.getElementById("about_btn");
+                        resetActive();
+                        if (about_btn) {
+                            about_btn.classList.add("active");
+                        }
+                        break;
+                    case 'contact':
+                        const contact_btn = document.getElementById("contact_btn");
+                        resetActive();
+                        if (contact_btn) {
+                            contact_btn.classList.add("active");
+                        }
+                        break;
+                    case 'projects':
+                        const projects_btn = document.getElementById("projects_btn");
+                        resetActive();
+                        if (projects_btn) {
+                            projects_btn.classList.add("active");
+                        }
+                        break;
+                    default:
+
+                        break;
+                }
+            } else {
+
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+</script>
 
 </html>
