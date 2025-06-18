@@ -1,0 +1,563 @@
+body {
+    background: #101111;
+    color: #f5f5f5;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+nav,footer {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #101111;
+}
+
+nav .middle {
+    width: 418px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 6px 32px 6px 6px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    background: linear-gradient(#101111, #101111) padding-box,
+        /* Inner background */
+        linear-gradient(269.57deg, #7A87FB 0.72%, #FFD49C 99.22%) border-box;
+}
+
+nav .middle a {
+    width: max-content;
+    min-width: 52px;
+    height: 36px;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav .middle a:hover,
+.active {
+    background-color: #292929;
+}
+
+nav .middle a img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+nav .middle a span {
+    width: max-content;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+nav .login-signup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 150px;
+    height: 52px;
+}
+
+.btn {
+    width: max-content;
+    min-width: 52px;
+    height: 52px;
+    border-radius: 52px;
+    gap: 6px;
+    border-width: 1px;
+    padding-top: 14px;
+    padding-right: 10px;
+    padding-bottom: 14px;
+    padding-left: 10px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #000000;
+    border: 2px solid transparent;
+    background: linear-gradient(90deg, #7A87FB 0%, #FFD49C 100%) padding-box,
+        /* Inner background */
+        linear-gradient(269.57deg, #7A87FB 0.72%, #FFD49C 99.22%) border-box;
+    cursor: pointer;
+
+}
+
+.btn:hover {
+    scale: 1.05;
+}
+
+.btn img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.hero {
+    min-height: 567px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    padding-top: 10%;
+    background-image: url('/demo/vone/assets/grid.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.hero-content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.hero-content h1 {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+
+}
+
+.hero-content p {
+    width: 80%;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.35px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.skills {
+    width: 1440px;
+    height: 70;
+    position: absolute;
+    left: -10vw;
+    bottom: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 99px;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #FFFFFF40;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    background: #101111;
+
+}
+
+.skills span {
+    width: max-content;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+
+}
+
+.skills img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.section-title {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 56.23px;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.section-title img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.timeline {
+    position: relative;
+    width: 600px;
+}
+
+.timeline .step {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+.timeline .circle {
+    width: 40px;
+    height: 40px;
+    background: #101111;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.timeline .number {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.timeline .ind {
+    min-height: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.timeline .line {
+    height: 90%;
+    position: absolute;
+    width: 1px;
+    background-color: #aaa9a933;
+    top: 50px;
+    left: 20px;
+}
+
+.timeline .text {
+    max-width: 500px;
+}
+
+.text h2 {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: 0px;
+    vertical-align: middle;
+
+}
+
+.text p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
+.timeline .button {
+    border: 2px solid transparent;
+    background: linear-gradient(#101111, #101111) padding-box,
+        /* Inner background */
+        linear-gradient(269.57deg, #7A87FB 0.72%, #FFD49C 99.22%) border-box;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.timeline .button:hover {
+    opacity: 0.8;
+}
+
+.timeline .eclipse {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 20px;
+}
+
+.projects .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    background: #151515;
+
+}
+
+.projects .container .gradient-box {
+    width: 550px;
+    height: 550px;
+    background: linear-gradient(45deg, #a9c9ff, #ffdab9);
+    border: 2px solid #fff;
+}
+
+.projects .container .text-box {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.projects .container .number {
+    width: 53px;
+    height: 53px;
+    background: #0000000D;
+    border-radius: 50%;
+    border: 0.84px solid;
+    background: linear-gradient(#101111, #0000000D) padding-box,
+        /* Inner background */
+        linear-gradient(180deg, #7D7D7D -11.69%, rgba(30, 30, 30, 0) 248.28%) border-box;
+    backdrop-filter: blur(25.198633193969727px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    font-family: Roboto Mono;
+    font-weight: 700;
+    font-size: 25.2px;
+    line-height: 26.88px;
+    letter-spacing: 0%;
+    text-align: center;
+
+}
+
+.projects .container .project-name {
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 22.17px;
+    letter-spacing: 0%;
+
+}
+
+.testimonials {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-grow: inherit;
+    gap: 80px;
+    padding: 20px;
+}
+
+.testimonials .testimonial {
+    width: 400px;
+    height: 200px;
+    border-radius: 24px;
+    gap: 10px;
+    border-width: 1.5px;
+    padding-top: 32px;
+    padding-right: 24px;
+    padding-left: 24px;
+    background: #15151566;
+    border-left: 1.5px solid;
+    border-top: 1.5px solid;
+    background: linear-gradient(#101111, #101111) padding-box,
+        /* Inner background */
+        linear-gradient(305.8deg, rgba(125, 122, 251, 0) 56.27%, #FFD49C 90.38%) border-box;
+}
+
+.testimonial:hover {
+    scale: 1.05;
+    transition: all 0.3s ease-in-out;
+}
+
+.testimonial .inner {
+    width: 350px;
+    height: 140px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.inner .head {
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.inner p {
+    width: 336px;
+    height: 63px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+}
+
+.head .profile {
+    width: 167;
+    height: 50;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+.head img {
+    width: 43px;
+    height: 31px;
+    object-fit: contain;
+}
+
+.profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #878787;
+}
+
+.profile .text {
+    width: 107;
+    height: 50;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.profile .text .name {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+
+}
+
+.profile .text .role {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+.contact {
+    height: 390px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 36px;
+}
+
+.left {
+    width: 600px;
+    height: 127;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 36px;
+}
+
+.left h3 {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 56.23px;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.contact .left p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    vertical-align: middle;
+}
+.contact .right {
+    width: 390px;
+    height: 390px;
+}
+.right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
