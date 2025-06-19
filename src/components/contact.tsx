@@ -24,7 +24,8 @@ return(
           </div>
           <div className={styles.contact_info}>
             <div className={styles.contact_icon}><FaEnvelope /></div>
-            <p>zayarmoekaung0@gmail.com</p>
+            <a href="mailto:zayarmoekaung0@gmail.com"><p>zayarmoekaung0@gmail.com</p></a>
+            <a href="mailto:zayar@blackmail.monster"><p>zayar@blackmail.monster</p></a>
           </div>
         </div>
       </div>
