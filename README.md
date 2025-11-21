@@ -1,38 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website
+
+This is the source code for my personal portfolio website, built using [Next.js](https://nextjs.org/) and deployed on [Vercel](https://portfolio-khaki-two-90.vercel.app). The site showcases my skills, projects, and professional background as a frontend developer.
+
+## Features
+
+- **Next.js Framework**: Fast, modern React-based site leveraging SSR/SSG for performance.
+- **TypeScript Support**: Type-safe components for reliability and maintainability.
+- **Custom Design**: Personalized layout and styles using CSS modules.
+- **Responsive**: Mobile-friendly and optimized for different devices.
+- **Project Gallery**: Section displaying my key projects, each with description and tech stack.
+- **About & Contact**: Easy access to information about me and a way for users to reach out.
+- **Fast Deployment & Updates**: Automated with Vercel.
+
+## Directory Structure
+
+- **src/** – Contains custom components, hooks, and logic for the UI and features.
+- **public/** – Static assets (images, favicons, etc.).
+- **types/** and **declaration.d.ts** – TypeScript types and global declarations.
+- **utils/** – Utility functions to support business logic.
+- **app/** – Main application and page files (such as `app/page.tsx`).
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+2. **Run locally**
+   ```bash
+   npm run dev
+   ```
+   Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Customization
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Update information and projects in the `src/` and `app/page.tsx` files as needed.
+- Add new images to `public/` and update component imports.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+This project is optimized for Vercel. For one-click deployment, use:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [Vercel Deploy](https://vercel.com/import/project?template=next.js)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Or follow standard Next.js deployment guides.
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
+This project is for personal and professional presentation. All code is © zayarmoekaung unless otherwise stated.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Live Site: [portfolio-khaki-two-90.vercel.app](https://portfolio-khaki-two-90.vercel.app)
+- Author: [github.com/zayarmoekaung](https://github.com/zayarmoekaung)
