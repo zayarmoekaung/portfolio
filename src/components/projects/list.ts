@@ -11,10 +11,6 @@ export const List = [
         image : "/projects/mlac.png",
         link  : "http://www.myanmarlocalartists.com"
     }
-
-]
-/* 
-[
     ,
     {
         name : "Fujimidai",
@@ -35,4 +31,3 @@ export const List = [
         link  : "https://datascience.zeroney.ai"
     }
 ]
-*/
