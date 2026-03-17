@@ -8,7 +8,8 @@ import SA from 'scroll-animations-js'
 import 'scroll-animations-js/dist/css/index.min.css'
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import Navbar from '../components/navbar'
+import Navbar from '@/components/navbar'
+import Hero from '@/components/hero';
 import Language from '@/components/languages';
 import Moto from '@/components/moto';
 import Island from '@/components/island';
@@ -304,6 +305,7 @@ export default function Home() {
             </div>
           </GoogleReCaptchaProvider>
         }
+        /** 
         <div className={styles.hero} id='hero'>
           <p className={`${styles.frame} sa-animation sa-fade-right`} >
             <Image
@@ -335,7 +337,8 @@ export default function Home() {
 
 
         </div>
-
+        */
+        <Hero />
         <section id='skills' className={`${styles.section}`}>
           <Language />
           <CodersRankSummary username="zayarmoekaung" />
