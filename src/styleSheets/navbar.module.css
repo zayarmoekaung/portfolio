@@ -1,8 +1,8 @@
 .nav{
     height: 3rem;
     width: 100vw;
-    background-color: #131418;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--bg-secondary);
+    box-shadow: 0 3px 20px var(--shadow);
     display: flex;
     position: fixed;
     z-index: 10;
@@ -33,7 +33,7 @@
     margin: 0 0.7vw;
 }
 .nav_links li a:hover {
-    color: #61DAFB;
+    color: var(--accent-blue);
 }
 .nav_links li {
     position: relative;
@@ -44,7 +44,7 @@
     display: block;
     height: 3px;
     width: 0%;
-    background-color: #61DAFB;
+    background-color: var(--accent-blue);
     position: absolute;
     transition: all ease-in-out 250ms;
     margin: 0 0 0 10%;
@@ -56,33 +56,34 @@
 /*Styling Buttons*/
 .login-button{
     background-color: transparent;
-    border: 1.5px solid #f2f5f7;
+    border: 1.5px solid var(--text-primary);
     border-radius: 2em;
     padding: 0.6rem 0.8rem;
     margin-left: 2vw;
     font-size: 1rem;
     cursor: pointer;
+    color: var(--text-primary);
 
 }
 .login-button:hover {
-    color: #131418;
-    background-color: #f2f5f7;
-    border:1.5px solid #f2f5f7;
+    color: var(--bg-primary);
+    background-color: var(--text-primary);
+    border:1.5px solid var(--text-primary);
     transition: all ease-in-out 350ms;
 }
 .join-button{
-    color: #131418;
-    background-color: #61DAFB;
-    border: 1.5px solid #61DAFB;
+    color: var(--bg-primary);
+    background-color: var(--accent-blue);
+    border: 1.5px solid var(--accent-blue);
     border-radius: 2em;
     padding: 0.6rem 0.8rem;
     font-size: 1rem;
     cursor: pointer;
 }
 .join-button:hover {
-    color: #f2f5f7;
+    color: var(--text-primary);
     background-color: transparent;
-    border:1.5px solid #f2f5f7;
+    border:1.5px solid var(--text-primary);
     transition: all ease-in-out 350ms;
 }
 
@@ -90,7 +91,7 @@
 .hamburger div{
     width: 30px;
     height:3px;
-    background: #f2f5f7;
+    background: var(--text-primary);
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -116,7 +117,7 @@
     }
     .nav_links{
         position: fixed;
-        background: #131418;
+        background: var(--bg-secondary);
         height: 100vh;
         width: 100%;
         flex-direction: column;
@@ -129,7 +130,7 @@
         clip-path: circle(1000px at 90% -10%);
         -webkit-clip-path: circle(1000px at 90% -10%);
         pointer-events: all;
-        background: #131418;
+        background: var(--bg-secondary);
         z-index: 21;
     }
     .nav_links li{

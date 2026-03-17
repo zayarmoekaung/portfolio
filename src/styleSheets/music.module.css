@@ -27,8 +27,7 @@
     z-index: 90;
 }
 .box_max {
-    background-color: rgba(0, 0, 0) !important ;
-  
+    background-color: var(--bg-primary) !important ;
     z-index: 99;
 }
 .inner_box{
@@ -65,7 +64,7 @@
     display: block;
 }
 .active{
-    background-color: white;  
+    background-color: var(--text-primary);  
 }
 .active::before {
     content: '';
@@ -435,4 +434,40 @@
       height: 50%;
       width: 50%;
     }
-  }
+  }/* Override react-modern-audio-player styles for theme compatibility */
+.max :global(.rm-audio-player) {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.max :global(.rm-audio-player button) {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.max :global(.rm-audio-player button:hover) {
+  background-color: var(--accent) !important;
+  color: var(--text-primary) !important;
+}
+
+.max :global(.rm-audio-player .rm-audio-player__play-button) {
+  background-color: var(--accent) !important;
+  color: var(--text-primary) !important;
+}
+
+.max :global(.rm-audio-player .rm-audio-player__controls) {
+  background-color: var(--bg-primary) !important;
+}
+
+.max :global(.rm-audio-player .rm-audio-player__track-info) {
+  color: var(--text-primary) !important;
+}
+
+.max :global(.rm-audio-player .rm-audio-player__progress-bar) {
+  background-color: var(--border) !important;
+}
+
+.max :global(.rm-audio-player .rm-audio-player__progress-bar-filled) {
+  background-color: var(--accent) !important;
+}

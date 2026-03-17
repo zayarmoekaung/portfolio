@@ -4,7 +4,13 @@ import Image from 'next/image'
 import styles from '../styleSheets/navbar.module.css'
 import { Link, animateScroll as scroll , scroller} from 'react-scroll';
 export default function Navbar () {
-const [open , setOpen] = useState(false);   
+const [open , setOpen] = useState(false);
+const [theme, setTheme] = useState('light');
+
+useEffect(() => {
+  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.classList.toggle('dark', systemTheme === 'dark');
+}, []);
 
 const handelHumber = () =>{
 setOpen(current => !current);

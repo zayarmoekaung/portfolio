@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
 import styles from './page.module.css'
 import glass from '../styleSheets/glass.module.css'
@@ -150,7 +150,7 @@ export default function Home() {
   const validatePhoneNumber = (number) => {
     const phoneNumberPattern = /^\+?[0-9]{1,3}?[-.s]?\(?[0-9]{1,3}?\)?[-.s]?[0-9]{1,5}[-.s]?[0-9]{1,5}[-.s]?[0-9]{1,9}$/;
     if (!phoneNumberPattern.test(number)) {
-      
+
       return 'Invalid phone number';
     }
     return '';
@@ -158,8 +158,8 @@ export default function Home() {
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
-    
-    if (emailError || !formValid() ) {
+
+    if (emailError || !formValid()) {
 
       return;
 
@@ -170,9 +170,9 @@ export default function Home() {
     formData.append('name', name);
     formData.append('email', email);
     formData.append('type', type);
-    formData.append('company',companyName);
-    formData.append('phone',phone);
-    formData.append('reason',reason);
+    formData.append('company', companyName);
+    formData.append('phone', phone);
+    formData.append('reason', reason);
 
     try {
       const response = await fetch(absoluteUrl + '/api/email', {
@@ -305,39 +305,6 @@ export default function Home() {
             </div>
           </GoogleReCaptchaProvider>
         }
-        /** 
-        <div className={styles.hero} id='hero'>
-          <p className={`${styles.frame} sa-animation sa-fade-right`} >
-            <Image
-              src='/img/zayar_moekaung.png'
-              width={300}
-              height={300}
-              alt='zayar'
-              className={styles.hero_img}
-            />
-          </p>
-          <div className={`${styles.hero_text} sa-animation sa-fade-left `}>
-            <p>
-              Crafting Seamless Digital Experiences.
-            </p>
-            <h1>ZayarMoekaung - Full Stack Developer | Software Engineer</h1>
-            <div>
-                <a href="https://github.com/zayarmoekaung" target="_blank" rel="noopener noreferrer">
-                  <FaGithub />
-                </a>
-                <a href="https://www.linkedin.com/in/zayarmoekaung" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin />
-                </a>
-            </div>
-            <div className={styles.btns}>
-              <button className={glass.glass_button} onClick={saveCv}>Get my resume</button>
-              <button className={glass.glass_button} onClick={savePortfolio}>Get my portfolio</button>
-            </div>
-          </div>
-
-
-        </div>
-        */
         <Hero />
         <section id='skills' className={`${styles.section}`}>
           <Language />
@@ -349,9 +316,9 @@ export default function Home() {
 
         <Island />
         <Music />
-        <section id='projects' className={`${styles.section}`}>          
+        <section id='projects' className={`${styles.section}`}>
           <CoderRankActivity username="zayarmoekaung" />
-          <Project/>
+          <Project />
         </section>
         <Service />
         <section id='experience' className={`${styles.exp_section}`}>

@@ -1,7 +1,8 @@
 import { useEffect } from "react";
+import styles from './coderrank.module.css';
 
-const CoderRankActivity = ({username})=>{
-    useEffect(() => {
+const CoderRankActivity = ({ username }: { username: string }) => {
+  useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://unpkg.com/@codersrank/activity@x.x.x/codersrank-activity.min.js';
     script.async = true;
@@ -13,7 +14,7 @@ const CoderRankActivity = ({username})=>{
   }, []);
 
   return (
-    <codersrank-activity username={username}></codersrank-activity>
+    <codersrank-activity username={username} className={styles.widget}></codersrank-activity>
   );
-}
-export default CoderRankActivity
+};
+export default CoderRankActivity;

@@ -1,19 +1,19 @@
 .glass_panel {
-    color: #fff;
-    background-color: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-primary);
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     border-radius: 15px;
     backdrop-filter: blur(10px);
   }
 .glass_button {
   /* Core Liquid Glass Appearance */
-  background: rgba(255, 255, 255, 0.08); /* Very subtle white translucency */
+  background: var(--glass-btn-bg); /* Very subtle white translucency */
   backdrop-filter: blur(10px); /* The "frosted glass" effect */
-  border: 1px solid rgba(255, 255, 255, 0.05); /* Very faint, almost invisible border */
+  border: 1px solid var(--glass-btn-border); /* Very faint, almost invisible border */
   border-radius: 10px; /* Softly rounded corners */
 
   /* Text & Padding */
-  color: #E0E0E0; /* Light text for contrast */
+  color: var(--glass-text); /* Light text for contrast */
   font-size: 1.1rem;
   font-weight: 500;
   padding: 0.8rem 2rem;
@@ -22,24 +22,24 @@
   text-decoration: none; /* For link-like buttons */
 
   /* Soft, Diffused Shadow for Floating Effect */
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 16px var(--shadow);
 
   /* Transition for Smooth Interactions */
   transition: all 0.3s ease-in-out;
 
   /* Ensure button content is centered */
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem; /* For potential icons */
 }
 
 .glass_button:hover {
-  background: rgba(255, 255, 255, 0.15); /* Slightly more opaque on hover */
-  border-color: rgba(255, 255, 255, 0.1); /* Slightly more defined border */
-  color: #00BFFF; /* A subtle, vibrant blue accent on hover */
+  background: var(--glass-bg); /* Slightly more opaque on hover */
+  border-color: var(--glass-border); /* Slightly more defined border */
+  color: var(--accent); /* A subtle, vibrant blue accent on hover */
   transform: translateY(-3px) scale(1.02); /* Gentle lift and slight scale */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), /* Enhanced shadow on hover */
+  box-shadow: 0 8px 24px var(--shadow), /* Enhanced shadow on hover */
               0 0 20px rgba(0, 191, 255, 0.3); /* Subtle blue glow */
 }
 

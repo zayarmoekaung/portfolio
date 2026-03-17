@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
+import styles from './coderrank.module.css';
 
-const CodersRankSummary = ({ username }) => {
+const CodersRankSummary = ({ username }: { username: string }) => {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://unpkg.com/@codersrank/summary@x.x.x/codersrank-summary.min.js';
@@ -13,7 +14,7 @@ const CodersRankSummary = ({ username }) => {
   }, []);
 
   return (
-    <codersrank-summary username={username} />
+    <codersrank-summary username={username} className={styles.widget} />
   );
 };
 

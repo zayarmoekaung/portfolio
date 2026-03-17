@@ -5,6 +5,27 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
+  /* Light theme colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #000000;
+  --text-secondary: #6c757d;
+  --accent: #007bff;
+  --border: #dee2e6;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --glow-accent: rgba(59, 130, 246, 0.15);
+  --glass-bg: rgba(0, 0, 0, 0.03);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --accent-orange: #c46703;
+  --btn-primary-bg: #000000;
+  --btn-primary-text: #ffffff;
+  --accent-blue: #61DAFB;
+  --glass-btn-bg: rgba(0, 0, 0, 0.08);
+  --glass-btn-border: rgba(0, 0, 0, 0.05);
+  --glass-text: #333333;
+  --backdrop-bg: rgba(0, 0, 0, 0.5);
+  --calendar-bg: rgba(0, 0, 0, 0.5);
+
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -40,36 +61,57 @@
   --card-border-rgb: 131, 134, 135;
 }
 
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.dark {
+  /* Dark theme colors */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --accent: #007bff;
+  --border: #333333;
+  --shadow: rgba(0, 0, 0, 0.5);
+  --glow-accent: rgba(59, 130, 246, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --accent-orange: #c46703;
+  --btn-primary-bg: #ffffff;
+  --btn-primary-text: #000000;
+  --accent-blue: #61DAFB;
+  --glass-btn-bg: rgba(255, 255, 255, 0.08);
+  --glass-btn-border: rgba(255, 255, 255, 0.05);
+  --glass-text: #E0E0E0;
+  --backdrop-bg: rgba(255, 255, 255, 0.5);
+  --calendar-bg: rgba(255, 255, 255, 0.5);
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
+  --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+  --secondary-glow: linear-gradient(
+    to bottom right,
+    rgba(1, 65, 255, 0),
+    rgba(1, 65, 255, 0),
+    rgba(1, 65, 255, 0.3)
+  );
 
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
+  --tile-start-rgb: 2, 13, 46;
+  --tile-end-rgb: 2, 5, 19;
+  --tile-border: conic-gradient(
+    #ffffff80,
+    #ffffff40,
+    #ffffff30,
+    #ffffff20,
+    #ffffff10,
+    #ffffff10,
+    #ffffff80
+  );
+
+  --callout-rgb: 20, 20, 20;
+  --callout-border-rgb: 108, 108, 108;
+  --card-rgb: 100, 100, 100;
+  --card-border-rgb: 200, 200, 200;
+}
 
 * {
   box-sizing: border-box;
@@ -98,18 +140,66 @@ a {
   text-decoration: none;
 }
 
-  html {
-    color-scheme: dark;
-  }
-
-codersrank-summary {
-  --header-bg-color: rgba(0,0,0);;
-  --name-font-size: 20px;
-  
+html {
+  color-scheme: light dark;
 }
-.codersrank-summary-badges{
-  background-color: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
+
+.codersrank-summary-badges {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
   border-radius: 15px;
   backdrop-filter: blur(10px);
+}
+
+/* CodersRank components theming */
+codersrank-summary,
+codersrank-activity,
+codersrank-work-experience {
+  --bg-color: var(--bg-primary);
+  --header-bg-color: var(--bg-secondary);
+  --header-text-color: var(--text-primary);
+  --badge-bg-color: var(--bg-secondary);
+  --badge-text-color: var(--text-primary);
+  --badge-border: 1px solid var(--border);
+  --badge-box-shadow: 0 1px 2px var(--shadow);
+  --border: 1px solid var(--border);
+  --preloader-color: var(--accent);
+  --branding-text-color: var(--text-secondary);
+}
+/* Audio player theme overrides */
+.rm-audio-player {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.rm-audio-player button {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.rm-audio-player button:hover {
+  background-color: var(--accent) !important;
+  color: var(--text-primary) !important;
+}
+
+.rm-audio-player .rm-audio-player__play-button {
+  background-color: var(--accent) !important;
+  color: var(--text-primary) !important;
+}
+
+.rm-audio-player .rm-audio-player__controls {
+  background-color: var(--bg-primary) !important;
+}
+
+.rm-audio-player .rm-audio-player__track-info {
+  color: var(--text-primary) !important;
+}
+
+.rm-audio-player .rm-audio-player__progress-bar {
+  background-color: var(--border) !important;
+}
+
+.rm-audio-player .rm-audio-player__progress-bar-filled {
+  background-color: var(--accent) !important;
 }

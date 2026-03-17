@@ -1,0 +1,24 @@
+.widget :global(codersrank-summary),
+.widget :global(codersrank-activity),
+.widget :global(codersrank-work-experience) {
+  /* Use app theme variables (set via .dark or default) */
+  --bg-color: var(--bg-primary);
+  --header-bg-color: var(--bg-secondary);
+  --header-text-color: var(--text-primary);
+  --text-color: var(--text-primary);
+  --badge-bg-color: var(--bg-secondary);
+  --badge-text-color: var(--text-primary);
+  --badge-border: 1px solid var(--border);
+  --badge-box-shadow: 0 1px 2px var(--shadow);
+  --preloader-color: var(--accent);
+  --branding-text-color: var(--text-secondary);
+  --border: 1px solid var(--border);
+}
+
+/* Additional tweaks for badge container (some versions expose these classes) */
+.widget :global(.codersrank-summary-badges) {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}

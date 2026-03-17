@@ -14,7 +14,7 @@ const Hero = () => {
             <Image
               src='/img/zayar_moekaung.png'
               width={400}
-              height={400}
+              height={520}
               alt='Zayar Moekaung'
               className={styles.hero_img}
               priority
