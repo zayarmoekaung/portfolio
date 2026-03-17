@@ -306,7 +306,6 @@ export default function Home() {
         }
         <div className={styles.hero} id='hero'>
           <p className={`${styles.frame} sa-animation sa-fade-right`} >
-
             <Image
               src='/img/zayar_moekaung.png'
               width={300}
