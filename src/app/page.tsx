@@ -324,7 +324,7 @@ export default function Home() {
                 <a href="https://github.com/zayarmoekaung" target="_blank" rel="noopener noreferrer">
                   <FaGithub />
                 </a>
-                <a href="www.linkedin.com/in/zayarmoekaung" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/zayarmoekaung" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin />
                 </a>
             </div>
