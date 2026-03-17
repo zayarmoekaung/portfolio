@@ -15,6 +15,7 @@
   justify-content: center; /* Adjust based on your overall hero layout (left/right split) */
   align-items: center;
   min-height: 80vh; /* Give it significant vertical space */
+  width: 100%;
   padding: 4rem 2rem; /* Generous padding */
   position: relative;
   overflow: hidden; /* To contain any subtle glows/shadows */
@@ -41,10 +42,9 @@
  }
 .hero_img{
   display: block;
-  width: 50%;
   min-width: 300px;
   height: auto;
-
+  background-color: none;
 }
 .hero_text {
   display: flex;

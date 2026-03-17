@@ -308,7 +308,7 @@ export default function Home() {
           <p className={`${styles.frame} sa-animation sa-fade-right`} >
 
             <Image
-              src='/img/zayar_moekaung_potrait.jpg'
+              src='/img/zayar_moekaung.png'
               width={300}
               height={300}
               alt='zayar'
