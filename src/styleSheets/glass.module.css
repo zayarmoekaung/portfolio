@@ -6,20 +6,57 @@
     backdrop-filter: blur(10px);
   }
 .glass_button {
-    
-    border: 0;
-    text-decoration: none;
-    border-radius: 15px;
-    background-color: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.1);
-    backdrop-filter: blur(30px);
-    color: rgba(255,255,255,0.8);
-    letter-spacing: 2px;
-    cursor: pointer;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
- 
-  .glass_button:hover {
-    background-color: rgba(255,255,255,0.2);
-  }
+  /* Core Liquid Glass Appearance */
+  background: rgba(255, 255, 255, 0.08); /* Very subtle white translucency */
+  backdrop-filter: blur(10px); /* The "frosted glass" effect */
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Very faint, almost invisible border */
+  border-radius: 10px; /* Softly rounded corners */
+
+  /* Text & Padding */
+  color: #E0E0E0; /* Light text for contrast */
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none; /* For link-like buttons */
+
+  /* Soft, Diffused Shadow for Floating Effect */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  /* Transition for Smooth Interactions */
+  transition: all 0.3s ease-in-out;
+
+  /* Ensure button content is centered */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* For potential icons */
+}
+
+.glass_button:hover {
+  background: rgba(255, 255, 255, 0.15); /* Slightly more opaque on hover */
+  border-color: rgba(255, 255, 255, 0.1); /* Slightly more defined border */
+  color: #00BFFF; /* A subtle, vibrant blue accent on hover */
+  transform: translateY(-3px) scale(1.02); /* Gentle lift and slight scale */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), /* Enhanced shadow on hover */
+              0 0 20px rgba(0, 191, 255, 0.3); /* Subtle blue glow */
+}
+
+.glass_button:active {
+  transform: translateY(0); /* Press effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: If you want a specific "primary" style for one button, e.g., "Download Resume" */
+.glass_button.primary {
+  background: linear-gradient(135deg, rgba(0, 191, 255, 0.2), rgba(0, 123, 255, 0.2));
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  color: #E0E0E0;
+}
+
+.glass_button.primary:hover {
+  background: linear-gradient(135deg, rgba(0, 191, 255, 0.3), rgba(0, 123, 255, 0.3));
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6),
+              0 0 30px rgba(0, 191, 255, 0.6);
+}

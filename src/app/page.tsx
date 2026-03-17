@@ -1,13 +1,13 @@
 "use client";
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect} from 'react';
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 import glass from '../styleSheets/glass.module.css'
 import modal from '../styleSheets/island.module.css'
-import Link from 'next/link'
 import SA from 'scroll-animations-js'
 import 'scroll-animations-js/dist/css/index.min.css'
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import Navbar from '../components/navbar'
 import Language from '@/components/languages';
 import Moto from '@/components/moto';
@@ -16,16 +16,13 @@ import Music from '@/components/anthem/music';
 import Project from '@/components/projects/project_show';
 import Service from '@/components/services/service';
 import Contact from '@/components/contact';
-import { saveAs } from "file-saver";
 import CodersRankSummary from '@/components/coderrank/coderrank_summary';
 import CoderRankActivity from '@/components/coderrank/activity';
 import CoderRankExperience from '@/components/coderrank/experience';
 import localFont from 'next/font/local'
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import axios from 'axios'
 import { getAbsoluteUrl } from '../../utils/vercel-utils';
-import { set } from 'mobx';
 
 const aileron = localFont({ src: '../fonts/Anurati-Regular.otf' })
 export default function Home() {
@@ -311,7 +308,7 @@ export default function Home() {
           <p className={`${styles.frame} sa-animation sa-fade-right`} >
 
             <Image
-              src='/img/zayar.png'
+              src='/img/zayar_moekaung_potrait.jpg'
               width={300}
               height={300}
               alt='zayar'
@@ -320,12 +317,17 @@ export default function Home() {
           </p>
           <div className={`${styles.hero_text} sa-animation sa-fade-left `}>
             <p>
-              I am ZayarMoeKaung
+              Crafting Seamless Digital Experiences.
             </p>
-            <h1>Full Stack Developer</h1>
-            <h1>DevOp</h1>
-            <h1>Software Engineer</h1>
-            <h1>FreeLancer</h1>
+            <h1>ZayarMoekaung - Full Stack Developer | Software Engineer</h1>
+            <div>
+                <a href="https://github.com/zayarmoekaung" target="_blank" rel="noopener noreferrer">
+                  <FaGithub />
+                </a>
+                <a href="www.linkedin.com/in/zayarmoekaung" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin />
+                </a>
+            </div>
             <div className={styles.btns}>
               <button className={glass.glass_button} onClick={saveCv}>Get my resume</button>
               <button className={glass.glass_button} onClick={savePortfolio}>Get my portfolio</button>
