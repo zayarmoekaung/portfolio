@@ -1,108 +1,104 @@
 "use client";
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image'
-import styles from './page.module.css'
-import glass from '../styleSheets/glass.module.css'
-import modal from '../styleSheets/island.module.css'
-import SA from 'scroll-animations-js'
-import 'scroll-animations-js/dist/css/index.min.css'
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import Navbar from '@/components/navbar'
-import Hero from '@/components/hero';
-import Language from '@/components/languages';
-import Moto from '@/components/moto';
-import Island from '@/components/island';
-import Music from '@/components/anthem/music';
-import Project from '@/components/projects/project_show';
-import Service from '@/components/services/service';
-import Contact from '@/components/contact';
-import CodersRankSummary from '@/components/coderrank/coderrank_summary';
-import CoderRankActivity from '@/components/coderrank/activity';
-import CoderRankExperience from '@/components/coderrank/experience';
-import localFont from 'next/font/local'
+import React, { useState, useEffect} from "react";
+import styles from "./page.module.css";
+import glass from "../styleSheets/glass.module.css";
+import modal from "../styleSheets/island.module.css";
+import SA from "scroll-animations-js";
+import "scroll-animations-js/dist/css/index.min.css";
+import Navbar from "@/components/navbar";
+import Hero from "@/components/hero";
+import Language from "@/components/languages";
+import Moto from "@/components/moto";
+import Island from "@/components/island";
+import Music from "@/components/anthem/music";
+import Project from "@/components/projects/project_show";
+import Service from "@/components/services/service";
+import Contact from "@/components/contact";
+import CodersRankSummary from "@/components/coderrank/coderrank_summary";
+import CoderRankActivity from "@/components/coderrank/activity";
+import CoderRankExperience from "@/components/coderrank/experience";
+import localFont from "next/font/local";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import { getAbsoluteUrl } from '../../utils/vercel-utils';
+import { getAbsoluteUrl } from "../../utils/vercel-utils";
 
-const aileron = localFont({ src: '../fonts/Anurati-Regular.otf' })
+const aileron = localFont({ src: "../fonts/Anurati-Regular.otf" });
 export default function Home() {
-  const [type, setType] = useState('')
-  const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
-  const [phone, setPhone] = useState('')
-  const [companyName, setCompanyName] = useState('')
-  const [reason, setReason] = useState('')
-  const [showmodal, setShowmodal] = useState(false)
-  const [message, setMessage] = useState(null)
-  const [noti, setNoti] = useState('')
-  const [emailError, setEmailError] = useState('')
-  const [nameError, setNameError] = useState('')
-  const [cNameError, setCNameError] = useState('')
-  const [phoneError, setPhoneError] = useState('')
-  const [reasonError, setReasonError] = useState('')
+  const [type, setType] = useState("");
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [reason, setReason] = useState("");
+  const [showmodal, setShowmodal] = useState(false);
+  const [message, setMessage] = useState(null);
+  const [noti, setNoti] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [cNameError, setCNameError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  const [reasonError, setReasonError] = useState("");
   const { executeRecaptcha } = useGoogleReCaptcha();
   useEffect(() => SA.init(), []);
   const saveCv = () => {
-    setShowmodal(!showmodal)
-    setType('Resume')
-    /*
-    saveAs(
-      "/info/ZayarMoeKaung_Resume_16-05-2023-10-29-33.pdf",
-      "zayarmoekaung_resume.pdf"
-    );
-   */
+    setShowmodal(!showmodal);
+    setType("Resume");
   };
   const savePortfolio = () => {
-    /*saveAs(
-      "/info/zayarmoekaung_portfolio.pptx", 
-      "zayarmoekaung_portfolio.pptx"
-    );*/
-    setShowmodal(!showmodal)
-    setType('Portfolio')
+    setShowmodal(!showmodal);
+    setType("Portfolio");
   };
   const handlemodal = () => {
-    setShowmodal(!showmodal)
+    setShowmodal(!showmodal);
 
     if (showmodal) {
-      setEmail('')
-      setName('')
-      setCompanyName('')
-      setPhone('')
-      setReason('')
-      setCNameError('')
-      setEmailError('')
-      setNameError('')
-      setPhoneError('')
-      setReasonError('')
+      setEmail("");
+      setName("");
+      setCompanyName("");
+      setPhone("");
+      setReason("");
+      setCNameError("");
+      setEmailError("");
+      setNameError("");
+      setPhoneError("");
+      setReasonError("");
     }
-  }
-  const handleEmailChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+  };
+  const handleEmailChange = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     const { value } = e.target;
     setEmail(value);
     setEmailError(validateEmail(value));
-
   };
   const validateEmail = (vemail) => {
     // Email validation logic
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(vemail)) {
-      return 'Invalid email address';
+      return "Invalid email address";
     }
-    return '';
+    return "";
   };
-  const handleNameChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+  const handleNameChange = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     setName(e.target.value);
   };
-  const handleCompanyNameChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+  const handleCompanyNameChange = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     setCompanyName(e.target.value);
   };
-  const handlePhoneChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+  const handlePhoneChange = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     const { value } = e.target;
     setPhone(value);
     setPhoneError(validatePhoneNumber(value));
   };
-  const handleReasonChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+  const handleReasonChange = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     const inputText = e.target.value;
     if (inputText.length <= 200) {
       setReason(inputText);
@@ -111,35 +107,35 @@ export default function Home() {
   const formValid = () => {
     let result = true;
     if (!name) {
-      setNameError('Please fill in your name');
+      setNameError("Please fill in your name");
       result = false;
     } else {
-      setNameError('');
+      setNameError("");
     }
 
     if (!companyName) {
-      setCNameError('Please fill in your business name');
+      setCNameError("Please fill in your business name");
       result = false;
     } else {
-      setCNameError('');
+      setCNameError("");
     }
 
     if (!phone) {
-      setPhoneError('Please fill in your phone number');
+      setPhoneError("Please fill in your phone number");
       result = false;
     } else {
       setPhoneError(validatePhoneNumber(phone));
     }
 
     if (!reason) {
-      setReasonError('Please fill in your reason for requesting');
+      setReasonError("Please fill in your reason for requesting");
       result = false;
     } else {
-      setReasonError('');
+      setReasonError("");
     }
 
     if (!email) {
-      setEmailError('Please fill in your email address');
+      setEmailError("Please fill in your email address");
       result = false;
     } else {
       setEmailError(validateEmail(email));
@@ -148,82 +144,73 @@ export default function Home() {
     return result;
   };
   const validatePhoneNumber = (number) => {
-    const phoneNumberPattern = /^\+?[0-9]{1,3}?[-.s]?\(?[0-9]{1,3}?\)?[-.s]?[0-9]{1,5}[-.s]?[0-9]{1,5}[-.s]?[0-9]{1,9}$/;
+    const phoneNumberPattern =
+      /^\+?[0-9]{1,3}?[-.s]?\(?[0-9]{1,3}?\)?[-.s]?[0-9]{1,5}[-.s]?[0-9]{1,5}[-.s]?[0-9]{1,9}$/;
     if (!phoneNumberPattern.test(number)) {
-
-      return 'Invalid phone number';
+      return "Invalid phone number";
     }
-    return '';
+    return "";
   };
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
-
     if (emailError || !formValid()) {
-
       return;
-
     }
     const absoluteUrl = getAbsoluteUrl();
     handlemodal();
     const formData = new FormData();
-    formData.append('name', name);
-    formData.append('email', email);
-    formData.append('type', type);
-    formData.append('company', companyName);
-    formData.append('phone', phone);
-    formData.append('reason', reason);
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("type", type);
+    formData.append("company", companyName);
+    formData.append("phone", phone);
+    formData.append("reason", reason);
 
     try {
-      const response = await fetch(absoluteUrl + '/api/email', {
-        method: 'POST',
+      const response = await fetch(absoluteUrl + "/api/email", {
+        method: "POST",
         body: formData,
       });
 
       if (response.ok) {
         // Handle success
-        console.log('Email sent successfully');
-        setMessage('You will receive an email shortly');
-        setNoti('success');
+        console.log("Email sent successfully");
+        setMessage("You will receive an email shortly");
+        setNoti("success");
       } else {
         // Handle error
-        console.error('Failed to send');
-        setMessage('Something went wrong. Please try again later.');
-        setNoti('error');
+        console.error("Failed to send");
+        setMessage("Something went wrong. Please try again later.");
+        setNoti("error");
       }
     } catch (error) {
       // Handle error
-      console.error('Error sending email:', error);
+      console.error("Error sending email:", error);
     }
-
-
   };
   const handleClose = () => {
-    setMessage(null)
+    setMessage(null);
   };
   const remainingChars = 200 - reason.length;
   const isMaxCharsReached = remainingChars === 0;
   return (
     <>
-
       <Navbar></Navbar>
-      {
-        message &&
+      {message && (
         <div className={styles.noti_box}>
-          <div className={`${styles.notification} ${noti == 'success' ? styles.success : styles.error}`}>
+          <div
+            className={`${styles.notification} ${noti == "success" ? styles.success : styles.error}`}
+          >
             <span className={`${styles.message}`}>{message}</span>
             <button className={`${styles.close_button}`} onClick={handleClose}>
               &times;
             </button>
           </div>
         </div>
-
-
-      }
+      )}
       <main className={styles.main}>
-        {
-          showmodal &&
-
+        {showmodal && (
           <GoogleReCaptchaProvider
             reCaptchaKey="6Lciv0smAAAAAPsT95rlCLOBvv5S5pDuYaWzD06y"
             scriptProps={{
@@ -231,13 +218,22 @@ export default function Home() {
               defer: false,
               appendTo: "head",
               nonce: undefined,
-            }}>
-            <div className={`${modal.shell}`} >
+            }}
+          >
+            <div className={`${modal.shell}`}>
               <div className={`${modal.backdrop}`} onClick={handlemodal}></div>
-              <div className={`${modal.btn_outter}`}><button onClick={handlemodal} className={`${glass.glass_button}`}>X</button></div>
+              <div className={`${modal.btn_outter}`}>
+                <button
+                  onClick={handlemodal}
+                  className={`${glass.glass_button}`}
+                >
+                  X
+                </button>
+              </div>
               <div className={`${modal.panel} ${glass.glass_panel}`}>
                 <p>
-                  Care to tell me about yourself alittle ? I will send you my {type} in a jiffy !
+                  Care to tell me about yourself alittle ? I will send you my{" "}
+                  {type} in a jiffy !
                 </p>
                 <form className={styles.formContainer}>
                   <input
@@ -259,7 +255,9 @@ export default function Home() {
                     className={styles.inputField}
                     maxLength={30}
                   />
-                  {cNameError && <p className={styles.error_txt}>{cNameError}</p>}
+                  {cNameError && (
+                    <p className={styles.error_txt}>{cNameError}</p>
+                  )}
                   <input
                     type="email"
                     placeholder="Enter Your Mail"
@@ -269,7 +267,9 @@ export default function Home() {
                     className={styles.inputField}
                     maxLength={30}
                   />
-                  {emailError && <p className={styles.error_txt}>{emailError}</p>}
+                  {emailError && (
+                    <p className={styles.error_txt}>{emailError}</p>
+                  )}
                   <input
                     type="tel"
                     id="phoneNumber"
@@ -280,7 +280,9 @@ export default function Home() {
                     className={styles.inputField}
                     maxLength={13}
                   />
-                  {phoneError && <p className={styles.error_txt}>{phoneError}</p>}
+                  {phoneError && (
+                    <p className={styles.error_txt}>{phoneError}</p>
+                  )}
                   <textarea
                     id="reason"
                     value={reason}
@@ -291,12 +293,15 @@ export default function Home() {
                     className={styles.textarea}
                   ></textarea>
                   <p
-                    className={`${styles.remainingChars} ${isMaxCharsReached ? styles.maxCharsReached : ''
-                      }`}
+                    className={`${styles.remainingChars} ${
+                      isMaxCharsReached ? styles.maxCharsReached : ""
+                    }`}
                   >
                     {remainingChars} / 200
                   </p>
-                  {reasonError && <p className={styles.error_txt}>{reasonError}</p>}
+                  {reasonError && (
+                    <p className={styles.error_txt}>{reasonError}</p>
+                  )}
                   <button onClick={handleSubmit} className={glass.glass_button}>
                     Send
                   </button>
@@ -304,30 +309,29 @@ export default function Home() {
               </div>
             </div>
           </GoogleReCaptchaProvider>
-        }
+        )}
         <Hero />
-        <section id='skills' className={`${styles.section}`}>
+        <section id="skills" className={`${styles.section}`}>
           <Language />
           <CodersRankSummary username="zayarmoekaung" />
         </section>
-        <section id='moto' className={`${styles.section}`}>
-          < Moto />
+        <section id="moto" className={`${styles.section}`}>
+          <Moto />
         </section>
 
         <Island />
         <Music />
-        <section id='projects' className={`${styles.section}`}>
+        <section id="projects" className={`${styles.section}`}>
           <CoderRankActivity username="zayarmoekaung" />
           <Project />
         </section>
         <Service />
-        <section id='experience' className={`${styles.exp_section}`}>
+        <section id="experience" className={`${styles.exp_section}`}>
           <h3 className={`${aileron.className}`}>Work Experiences</h3>
           <CoderRankExperience username="zayarmoekaung" />
         </section>
         <Contact />
       </main>
-
     </>
-  )
+  );
 }
