@@ -1,8 +1,7 @@
 
 import './globals.css'
 import "animate.css/animate.min.css"
-import { Analytics } from "@vercel/analytics/react"   
-import { Suspense } from "react"
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
   title: 'Zayar-Portfolio',
@@ -48,9 +47,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
-        <Suspense fallback={null}>
-          <Analytics />
-        </Suspense>
+        <Analytics />
       </body>
     </html>
   )
